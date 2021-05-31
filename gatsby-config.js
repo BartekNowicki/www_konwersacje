@@ -1,8 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Konwersacje w języku angielskim z near native speakerem`,
+    description: `Dwujęzyczny near native speaker zaprasza na konwersacje po angielsku.`,
+    author: `Bartosz Nowicki`,
+    keywords: `angielski, konwersacje, Warszawa, native`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
