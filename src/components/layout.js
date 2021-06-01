@@ -11,7 +11,9 @@ import PropTypes from "prop-types"
 
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+//import Header from "./headerAsTemplate"
+
+import Footer from "./Footer"
 
 import "./layout.scss"
 
@@ -42,17 +44,7 @@ const Layout = ({ children }) => {
         
         <main style = {{border: '1px solid red'}}>{children}</main>
 
-
-        {/* <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer> */}
-
+        <Footer />
 
       </div>
     </>
