@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Text = ({text, tag, name, classN}) => {
 
-    if (tag !== ('h1' || 'h2' || 'h3' || 'h4' || 'h5' || 'p')) {
-        console.warn('warning - tag not recognized!');
+    if (!'h1h2h3h4h5p'.includes(tag)) {
+        console.warn('warning - tag not recognized! ', tag);
     }
         
     return tag === 'h1' 
