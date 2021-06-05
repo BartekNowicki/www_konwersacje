@@ -55,7 +55,7 @@
      >
 
        {({ isSubmitting }) => (
-         <Form netlify>
+         <Form>
            <Field type="text" name="email" placeholder = 'komu odpisać?' onKeyUp = {(e) => store.dispatch(actionChangeEmail(e.target.value))}/>
            <ErrorMessage name="email" component="div" />
            <Field type="text" name="message" placeholder = 'skrobnij coś' onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))} />
