@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import './campsite.scss';
 import { Text } from "../components/Text"
-import MenuItem from "./MenuItem"
+// import MenuItem from "./MenuItem"
 import  MenuItems from "./MenuItems"
 
 import data from "../components/data"

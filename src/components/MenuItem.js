@@ -15,9 +15,9 @@ const MenuItem = ({ name }) => {
     }
 
     return (
-        <div className = "menuItem" name = { name } onClick={ handleClick }>
+        <div className = "menuItem" name = { name }>
             <img src={ board } className = "board" alt=""/>
-            <p className = "menuItemText">{name === 'omnie' ? 'o mnie' : name}</p>
+            <p onClick={ handleClick } className = "menuItemText">{name === 'omnie' ? 'o mnie' : name}</p>
         </div>
     )
 }

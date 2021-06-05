@@ -80,6 +80,9 @@
     flex-direction: column;
     justify-content: flex-start;
     // overflow: hidden;
+    @media (max-width: 640px) {
+        transform: scale(0.9) translate(-40px, -10px);
+    }
 }
 
 .menuItem {
@@ -87,35 +90,40 @@
     background-color: transparent;
     position: relative; //for the menuItemText inside
     //border: 1px solid blue;
-    transition: transform 0.5s;
+    transition: transform 0.75s;
     &:hover {
         transform: translateY(-3px);
     }
-    &:hover p {
-        color: black;
-        
-    }
+    
 }
 
 .board {
     // border: 1px solid red;
     width: 100%;
     height: auto;
-    margin-top: -20px;    
+    margin-top: -20px;
+    // &:hover~p {
+    //     color: black;        
+    // }
 }
 
 .menuItemText {
+    // border: 1px solid yellow;
     font-weight: bold;
     font-size: 13px;
     color: wheat;
     position: absolute;
-    bottom: 25%;
+    bottom: 8%;
     left: 50%;
     transform: translateX(-55%);
-    margin: 3px;
+    padding: 10px 5px;
+    &:hover {
+        color: black;        
+    }
     // border: 1px solid yellow;
     @media (min-width: 800px) {
         font-size: 20px;
+        bottom: 16%;
     }
     
 }
