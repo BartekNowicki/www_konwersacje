@@ -1,29 +1,14 @@
  import React from 'react';
-
  import { Formik, Form, Field, ErrorMessage } from 'formik';
-
  import { useStore } from 'react-redux'
+ import { actionChangeEmail, actionChangeMessage } from '../state/actions'
  
-
  const BasicFormik = () => {
 
     //both work, just saying...
     const store = useStore();
     // const dispatch = useDispatch();
-
-    const actionChangeEmail = (newEmail) => {        
-        return {
-            type: 'NEW_EMAIL', 
-            payload: newEmail 
-        }
-    }
-
-    const actionChangeMessage = (newMessage) => {        
-        return {
-            type: 'NEW_MESSAGE', 
-            payload: newMessage
-        }
-    }
+    
      
     return (
      <div>

@@ -1,33 +1,19 @@
 import * as React from "react"
-
 // import { Link } from "gatsby"
-
 // import { StaticImage } from "gatsby-plugin-image"
-
 import { Campsite } from "../components/Campsite"
-
 import { Text } from "../components/Text"
 import "../components/text.scss"
-
-import Layout from "../components/layout";
-
-import Seo from "../components/seo";
-
-import data from "../components/data";
-
-import myStore  from '../state/createStore';
-
-import MyFormik from "../components/myFormik";
-
+import Layout from "../components/layout"
+import Seo from "../components/seo"
+import data from "../components/data"
+import myStore  from '../state/createStore'
+import MyFormik from "../components/myFormik"
 import { Provider } from 'react-redux'
-
-
-
 
 const IndexPage = () => {
 
-  const store = myStore();
-  
+  const store = myStore();  
   
   return (
 
@@ -41,13 +27,7 @@ const IndexPage = () => {
 
         <MyFormik />
         
-        <Text tag = 'h1' text = {data.text1} name = 'text_1'/>
-        <Text tag = 'h2' text = {data.text2} name = 'text_2'/>
-        <Text tag = 'h3' text = {data.text3} name = 'text_3'/>
-        <Text tag = 'h4' text = {data.text4} name = 'text_4'/>
-        <Text tag = 'h5' text = {data.text5} name = 'text_5'/>
-        <Text tag = 'p' text = {data.text6} name = 'text_6'/>
-        <Text tag = 'p' text = {data.text7} name = 'text_7'/>
+        
         <Text tag = 'p' text = {data.text8} name = 'text_8' classN = 'heading'/>
         <Text tag = 'p' text = {data.text81} name = 'text_81' classN = 'regular'/>
         <Text tag = 'p' text = {data.text82} name = 'text_82' classN = 'regular'/>

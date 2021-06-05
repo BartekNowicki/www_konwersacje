@@ -1,5 +1,124 @@
+.campsiteWrapper {
+    border: 1px solid rebeccapurple;
+    width: 100%;
+    height: auto;
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
 .campsiteSvg {
     border: 1px solid green;
     width: 100%;
-    height: auto;
+    height: auto;    
 }
+
+[name = "text_1"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_2"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 10%;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_3"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 20%;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_4"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 30%;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_5"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_6"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: whitesmoke;
+}
+
+[name = "text_7"] {
+    // border: 1px solid rebeccapurple;
+    position: absolute;
+    top: 60%;
+    right: 0;
+    color: whitesmoke;
+}
+
+.menuItems {
+    // border: 1px solid rebeccapurple;
+    position: fixed;
+    top: 10px;
+    left: 40px;
+    width: 10%;
+    min-width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    // overflow: hidden;
+}
+
+.menuItem {
+    cursor: pointer;
+    background-color: transparent;
+    position: relative; //for the menuItemText inside
+    //border: 1px solid blue;
+    transition: transform 0.5s;
+    &:hover {
+        transform: translateY(-3px);
+    }
+    &:hover p {
+        color: black;
+        
+    }
+}
+
+.board {
+    // border: 1px solid red;
+    width: 100%;
+    height: auto;
+    margin-top: -20px;    
+}
+
+.menuItemText {
+    font-weight: bold;
+    font-size: 13px;
+    color: wheat;
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-55%);
+    margin: 3px;
+    // border: 1px solid yellow;
+    @media (min-width: 800px) {
+        font-size: 20px;
+    }
+    
+}
+
+
+
