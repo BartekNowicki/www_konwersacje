@@ -2,13 +2,14 @@
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  import { useStore } from 'react-redux'
  import { actionChangeEmail, actionChangeMessage } from '../state/actions'
+ import { sendEmail } from '../utils/sendEmail'
  
+
  const BasicFormik = () => {
 
     //both work, just saying...
     const store = useStore();
     // const dispatch = useDispatch();
-    
      
     return (
      <div>
@@ -33,7 +34,9 @@
         store.dispatch(actionChangeMessage(values.message));
 
          setTimeout(() => {
-           alert(JSON.stringify(values, null, 2));           
+           const submission = JSON.stringify(values, null, 2);
+           //  alert(JSON.stringify(values, null, 2));       
+           sendEmail(submission);
            setSubmitting(false);
          }, 400);
        }}

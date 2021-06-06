@@ -11,31 +11,8 @@ import myStore  from '../state/createStore'
 import MyFormik from "../components/myFormik"
 import { Provider } from 'react-redux'
 
-const testEmail = async () => {
-
-  // fetch('../functions/testEmail.js')
-  // fetch('/.netlify/functions/testEmail.js')
-  // .then(response => response.json())
-  // .then(data => console.log(data));
-//testing email start 2
-
-  try {
-    const result = await fetch('/.netlify/functions/testEmail.js');
-    console.log('result ', result);
-  } catch (error) {
-    console.error(error);
-    // expected output: ReferenceError: nonExistentFunction is not defined
-    // Note - error messages will vary depending on browser
-  }
-
-}
-
-
-
 const IndexPage = () => {
-
-  testEmail();
-  
+    
   const store = myStore();
   
   return (
