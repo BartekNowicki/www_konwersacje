@@ -16,7 +16,7 @@ exports.handler = function(event, context, callback) {
     transporter.sendMail({
         from: 'angielskikonwersacjeeu@gmail.com',
         to: 'angielskikonwersacjeeu@gmail.com',
-        subject: `you've got mail :)`,
+        subject: ``,
         html: `<h3>an email from NETLIFY!!!<h3>`
     }, function(error, info) {
         if (error) {
