@@ -13,6 +13,17 @@ import { Provider } from 'react-redux'
 
 const IndexPage = () => {
 
+
+  
+//testing email start
+  fetch('../functions/testEmail.js')
+  .then(response => response.json())
+  .then(data => console.log(data));
+//testing email end
+
+
+
+
   const store = myStore();  
   
   return (
