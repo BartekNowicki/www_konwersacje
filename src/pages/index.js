@@ -15,10 +15,20 @@ const IndexPage = () => {
 
 
   
-//testing email start
-  fetch('../functions/testEmail.js')
+//testing email start 1
+  // fetch('../functions/testEmail.js')
+  fetch('/.netlify/functions/testEmail.js')
   .then(response => response.json())
   .then(data => console.log(data));
+//testing email start 2
+
+try {
+  await fetch('/.netlify/functions/testEmail.js');
+}
+
+
+
+
 //testing email end
 
 
