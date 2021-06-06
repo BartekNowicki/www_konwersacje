@@ -22,13 +22,13 @@ const IndexPage = () => {
   .then(data => console.log(data));
 //testing email start 2
 
-try {
-  await fetch('/.netlify/functions/testEmail.js');
-} catch (error) {
-  console.error(error);
-  // expected output: ReferenceError: nonExistentFunction is not defined
-  // Note - error messages will vary depending on browser
-}
+// try {
+//   await fetch('/.netlify/functions/testEmail.js');
+// } catch (error) {
+//   console.error(error);
+//   // expected output: ReferenceError: nonExistentFunction is not defined
+//   // Note - error messages will vary depending on browser
+// }
 
 //testing email end
 
