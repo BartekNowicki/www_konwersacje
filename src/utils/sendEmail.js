@@ -1,5 +1,5 @@
 
-const sendEmail = async (submission) => {
+const sendEmail = async (submission = 'bubba') => {
 
   try {
     const result = await fetch('/.netlify/functions/sendit.js');

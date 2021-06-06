@@ -3,8 +3,6 @@
  import { useStore } from 'react-redux'
  import { actionChangeEmail, actionChangeMessage } from '../state/actions'
  import sendEmail from '../utils/sendEmail'
-
-//  console.log(sendEmail);
  
 
  const BasicFormik = () => {
