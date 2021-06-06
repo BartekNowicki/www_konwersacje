@@ -6,8 +6,8 @@ exports.handler = function(event, context, callback) {
     let transporter = nodemailer.createTransport({
      service: "Gmail", 
      auth: {
-         user: process.env.EMAIL_LOGIN,
-         pass: process.env.EMAIL_PASS        
+         user: process.env.GATSBY_EMAIL_LOGIN,
+         pass: process.env.GATSBY_EMAIL_PASS        
      }
 });
 
