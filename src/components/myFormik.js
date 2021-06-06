@@ -2,7 +2,9 @@
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  import { useStore } from 'react-redux'
  import { actionChangeEmail, actionChangeMessage } from '../state/actions'
- import { sendEmail } from '../utils/sendEmail'
+ import sendEmail from '../utils/sendEmail'
+
+//  console.log(sendEmail);
  
 
  const BasicFormik = () => {
