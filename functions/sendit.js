@@ -20,7 +20,8 @@ exports.handler = function(event, context, callback) {
         html: `<h3>an email from NETLIFY!!!<h3>`
     }, function(error, info) {
         if (error) {
-            callback( 'lalalalal' + error);
+            // callback(error);
+            callback(process.env.GATSBY_EMAIL_LOGIN + ' ' + process.env.GATSBY_EMAIL_PASS + error);
         } else {
             callback(null, {
             statusCode: 200,
