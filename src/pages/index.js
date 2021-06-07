@@ -26,10 +26,7 @@ const IndexPage = () => {
 
         <Campsite/>
 
-        {console.log('TESTING: ', process.env.GATSBY_EMAIL_LOGIN)}
-
-        <MyFormik />
-        
+        <MyFormik />        
         
         <Text tag = 'p' text = {data.text8} name = 'text_8' classN = 'heading'/>
         <Text tag = 'p' text = {data.text81} name = 'text_81' classN = 'regular'/>
