@@ -11,6 +11,7 @@ import myStore  from '../state/createStore'
 import MyFormik from "../components/myFormik"
 import { Provider } from 'react-redux'
 
+
 const IndexPage = () => {
     
   const store = myStore();
@@ -24,6 +25,8 @@ const IndexPage = () => {
         <Seo title="Home" />
 
         <Campsite/>
+
+        {console.log('TESTING: ', process.env.GATSBY_EMAIL_LOGIN)}
 
         <MyFormik />
         

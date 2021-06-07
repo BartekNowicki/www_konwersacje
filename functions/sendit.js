@@ -3,6 +3,8 @@ const nodemailer = require('nodemailer');
 
 exports.handler = function(event, context, callback) {
 
+    console.log('TESTING: ', process.env.GATSBY_EMAIL_LOGIN);
+
     let transporter = nodemailer.createTransport({
      service: "Gmail", 
      auth: {
@@ -22,8 +24,11 @@ exports.handler = function(event, context, callback) {
         } else {
             callback(null, {
             statusCode: 200,
+            // body: JSON.stringify({
+            //        'result': 'success'
+            //     })
             body: JSON.stringify({
-                   'result': 'success'
+                   'result': process.env.GATSBY_EMAIL_LOGIN
                 })
         });
         }
