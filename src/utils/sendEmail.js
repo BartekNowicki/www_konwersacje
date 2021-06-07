@@ -1,11 +1,10 @@
-const axios = require('axios');
 
 const sendEmail = async (submission = 'bubba') => {
 
 console.log('sending!');  
 
   try {
-      const result = await fetch('/functions/sendit.js', {
+      const result = await fetch('/.netlify/functions/sendit.js', {
       //const result = await fetch('http://localhost:8888/.netlify/functions/sendit', {
 
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
