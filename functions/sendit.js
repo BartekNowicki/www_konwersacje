@@ -34,9 +34,9 @@ exports.handler = async (event, context) => {
         html: `<p>${JSON.stringify(mailContent)}</p>`
     }, function(error, info) {        
        if (error) {
-           showInfo(error);
+           showInfo('error', error);
        } else {
-           showInfo(info);
+           showInfo('goodInfo', info);
        } 
     });
     return {
