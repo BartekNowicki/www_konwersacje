@@ -21,7 +21,9 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       credentials: 'same-origin', // include, *same-origin, omit
 
       headers: {
-      'Content-Type': 'application/json'      
+      'Content-Type': 'application/json',
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Credentials': true   
       },
 
       redirect: 'follow', // manual, *follow, error
@@ -29,7 +31,7 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
 
       body:  submissionJSON,
-      
+
       });
       
       console.log('status: ', status);
