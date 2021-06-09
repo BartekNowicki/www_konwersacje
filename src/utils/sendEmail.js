@@ -21,9 +21,8 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       credentials: 'same-origin', // include, *same-origin, omit
 
       headers: {
-      'Content-Type': 'application/json',
-      'Access-Control-Allow-Origin': '*',
-      'Access-Control-Allow-Credentials': true   
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Credentials': true,
       },
 
       redirect: 'follow', // manual, *follow, error
