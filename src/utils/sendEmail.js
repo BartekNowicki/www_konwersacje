@@ -2,10 +2,11 @@
 const sendEmail = async (submissionJSON, confirmFormSent) => {
   
   let result;
+  
   console.log('submission to send ', submissionJSON);
 
   try {
-      const result = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
+      result = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
       //result = await fetch('http://localhost:8888/.netlify/functions/sendit', {
       method: 'POST',
       mode: 'cors',
