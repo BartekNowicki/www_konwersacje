@@ -4,13 +4,19 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
   console.log('submission to send ', submissionJSON);
 
   try {
-      //const { status } = await fetch('/.netlify/functions/sendit', {
+
+      //2 items to switch: cors and fetch
+
+
+      const { status } = await fetch('/.netlify/functions/sendit', {
         
-      const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
+      //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
 
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      //mode: 'cors', // no-cors, *cors, same-origin 
-      mode: 'no-cors', // local dev: no-cors!!!
+
+      mode: 'cors', // netlify: cors!!!
+      //mode: 'no-cors', // local dev: no-cors!!!
+      
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'same-origin', // include, *same-origin, omit
       headers: {
