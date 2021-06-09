@@ -1,7 +1,14 @@
 import React from 'react'
 import MenuItem from "./MenuItem"
+import { useDispatch } from 'react-redux'
+import { actionChangeIsMenuOpen } from '../state/actions'
+
 
 const MenuItems = ({ open }) => {
+
+    const dispatch = useDispatch();
+
+    const handleCloseClick = () => dispatch(actionChangeIsMenuOpen(false));
 
     return open ? 
     (
@@ -13,6 +20,7 @@ const MenuItems = ({ open }) => {
             <MenuItem text = 'lokalizacja' name = 'lokalizacja'/>
             <MenuItem text = 'zapisy' name = 'zapisy'/>
             <MenuItem text = 'faq' name = 'faq'/>
+            <div className = 'menuCloseBtn' name = 'menuCloseBtn' onClick={ handleCloseClick } ></div>
         </div>
     ) : (
         <div className = "menuItems">
@@ -22,6 +30,3 @@ const MenuItems = ({ open }) => {
 }
 
 export default MenuItems
-
-
-

@@ -12,6 +12,7 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       mode: 'cors',
       body:  submissionJSON,
       });
+      
       console.log('status: ', status);
       status === 200 ? confirmFormSent(true) : confirmFormSent(false);
   

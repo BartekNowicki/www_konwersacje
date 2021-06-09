@@ -1,11 +1,15 @@
 require('dotenv').config();
+
 const nodemailer = require('nodemailer');
+
 const showInfo = (intro = 'show info: ', msg = '\n you did not write anything non default to show here...') => {
     console.log('----------------------------------------');
     console.log(intro, msg);
     console.log('----------------------------------------');
 }
+
 const dummyTest = JSON.stringify({ "email": "testEmail", "message": "testMessage" });
+
 
 
 exports.handler = async (event, context) => {
