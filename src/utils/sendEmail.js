@@ -9,7 +9,8 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
 
       method: 'POST',
-      mode: 'no-cors', //local: no-cors
+      //mode: 'no-cors', //local: no-cors works
+      mode: 'cors', //remote: cors ...testing... works?
       body:  submissionJSON,
       });
       
