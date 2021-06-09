@@ -4,9 +4,9 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
   console.log('submission to send ', submissionJSON);
 
   try {
-      // const { status } = await fetch('/.netlify/functions/sendit', {
+      const { status } = await fetch('/.netlify/functions/sendit', {
         
-         const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
+      // const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
 
       method: 'POST',
       mode: 'cors',
