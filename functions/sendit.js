@@ -2,19 +2,20 @@ require('dotenv').config();
 
 const nodemailer = require('nodemailer');
 
-const showInfo = (intro = 'show info: ', msg = '\n you did not write anything non default to show here...') => {
-    console.log('----------------------------------------');
-    console.log(intro, msg);
-    console.log('----------------------------------------');
-}
-
-const dummyTest = JSON.stringify({ "email": "testEmail", "message": "testMessage" });
-
 
 
 exports.handler = async (event, context) => {
+
+    const showInfo = (intro = 'show info: ', msg = '\n you did not write anything non default to show here...') => {
+    console.log('----------------------------------------');
+    console.log(intro, msg);
+    console.log('----------------------------------------');
+    }
+
+    const dummyTest = JSON.stringify({ "email": "testEmail", "message": "testMessage" });
     
     const mailContent = event.body ? JSON.parse(event.body) : JSON.parse(dummyTest);
+    
     showInfo('stringified mailContent sent by serverless sendit ', JSON.stringify(mailContent));
     
     let transporter = nodemailer.createTransport({
