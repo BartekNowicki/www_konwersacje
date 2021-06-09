@@ -2,7 +2,7 @@
 const sendEmail = async (submissionJSON, confirmFormSent) => {
   
   let result;
-  
+
   console.log('submission to send ', submissionJSON);
 
   try {
