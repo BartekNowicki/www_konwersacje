@@ -1,17 +1,33 @@
  import React from 'react';
  import { Formik, Form, Field, ErrorMessage } from 'formik';
- import { useStore } from 'react-redux'
- import { actionChangeEmail, actionChangeMessage } from '../state/actions'
+ import { useStore, useSelector } from 'react-redux'
+ import { actionChangeEmail, actionChangeMessage, actionChangeFormSent } from '../state/actions'
  import sendEmail from '../utils/sendEmail'
  
 
  const BasicFormik = () => {
 
-    //both work, just saying...
+    console.log('FORMIK KOMPONENT RENDERED');
+    
     const store = useStore();
-    // const dispatch = useDispatch();
+    const isFormSent = useSelector((state) => state.isFormSent);  
+
+    const confirmFormSent = (isConfirmed) => {
+        console.log('form has been sent ', isConfirmed);
+        store.dispatch(actionChangeFormSent(true));
+        // const dispatch = useDispatch(); both work, just saying...
+    }
+
+    if (isFormSent) return (
+      <>
+        <h1>Kontakt</h1>
+        <p>Dziękuję za wysłanie formularza, zwykle odpisuję tego samego dnia </p>
+      </>
+    )
      
     return (
+
+      
      <div>
      <h1>Kontakt</h1>
      <Formik
@@ -34,9 +50,9 @@
         store.dispatch(actionChangeMessage(values.message));
 
          setTimeout(() => {
-           const submission = JSON.stringify(values, null, 2);
-           //  alert(JSON.stringify(values, null, 2));       
-           sendEmail(submission);
+           const submissionJSON = JSON.stringify(values, null, 2);
+           //alert(JSON.stringify(values, null, 2));   
+           sendEmail(submissionJSON,  confirmFormSent);          
            setSubmitting(false);
          }, 400);
        }}

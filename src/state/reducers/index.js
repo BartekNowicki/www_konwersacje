@@ -3,6 +3,7 @@ import changeEmail from './emailChanger'
 import changeMessage from './messageChanger'
 import openMenu from './menuOpener'
 import changeLocation from './locationChanger'
+import changeIsFormSent from './formIsSentChanger'
 
 
 
@@ -11,5 +12,7 @@ export default combineReducers({
   message: changeMessage,
   isMenuOpen: openMenu,
   location: changeLocation,
+  isFormSent: changeIsFormSent,
 });
+
 

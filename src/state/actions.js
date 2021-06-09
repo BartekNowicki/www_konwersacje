@@ -25,4 +25,11 @@
         }
     }
 
+    export const actionChangeFormSent = (isSent = false) => {        
+        return {
+            type: 'NEW_STATUS',
+            payload: isSent
+        }
+    }
+
     

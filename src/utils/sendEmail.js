@@ -1,29 +1,25 @@
 
-const sendEmail = async (submission = 'bubba') => {
-
-console.log('sending!');  
+const sendEmail = async (submissionJSON, confirmFormSent) => {
+  
+  let result;
+  console.log('submission to send ', submissionJSON);
 
   try {
       const result = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
-      //const result = await fetch('http://localhost:8888/.netlify/functions/sendit', {
-
-      method: 'POST', // *GET, POST, PUT, DELETE, etc.
-      mode: 'no-cors', // no-cors, *cors, same-origin
-      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-      credentials: 'same-origin', // include, *same-origin, omit
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      redirect: 'follow', // manual, *follow, error
-      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
-      body: JSON.stringify({ content: submission }) // body data type must match "Content-Type" header
-      // body: {"name": "HexOcean pizza", "preparation_time": "01:30:22", "type": "pizza", "no_of_slices": 4, "diameter": 33.4}
-
-  })    
+      //result = await fetch('http://localhost:8888/.netlify/functions/sendit', {
+      method: 'POST',
+      mode: 'cors',
+      body:  submissionJSON,
+      }).then(data => data.json()).then(data => {
+        console.log('result: ', data.status);
+        data.status === 'success' ? confirmFormSent(true) : confirmFormSent(false);
+      })
+  
   } catch (error) {
-    console.error(error);
+    console.error('error sending the message...', error);
   }
 
 }
 
 export default sendEmail
+
