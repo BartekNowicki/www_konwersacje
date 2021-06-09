@@ -15,7 +15,7 @@ exports.handler = async (event, context) => {
     const dummyTest = JSON.stringify({ "email": "testEmail", "message": "testMessage" });
     
     const mailContent = event.body ? JSON.parse(event.body) : JSON.parse(dummyTest);
-    
+
     showInfo('stringified mailContent sent by serverless sendit ', JSON.stringify(mailContent));
     
     let transporter = nodemailer.createTransport({
@@ -40,12 +40,13 @@ exports.handler = async (event, context) => {
            showInfo('goodInfo', info);
        } 
     });
+
     return {
     statusCode: 200,
-    headers: {
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Credentials': true,
-            },
+    // headers: {
+    //             'Access-Control-Allow-Origin': '*',
+    //             'Access-Control-Allow-Credentials': true,
+    //         },
     body: JSON.stringify({status: 'success'})}
         
   } catch (error) {
