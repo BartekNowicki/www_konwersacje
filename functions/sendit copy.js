@@ -21,8 +21,7 @@ exports.handler = async (event, context) => {
     showInfo('stringified mailContent sent by serverless sendit ', JSON.stringify(mailContent));
     
     let transporter = nodemailer.createTransport({
-        service: "Gmail",
-        host: 'smtp.gmail.com',
+        service: "Gmail", 
         auth: {            
             user: process.env.GATSBY_EMAIL_LOGIN,
             pass: process.env.GATSBY_EMAIL_PASS        
