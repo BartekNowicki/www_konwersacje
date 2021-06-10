@@ -2,20 +2,19 @@
 const sendEmail = async (submissionJSON, confirmFormSent) => {
   
   console.log('submission to send ', submissionJSON);
+  
 
   try {
 
       //2 items to switch: cors and fetch
+      const { status } = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
 
-
-      const { status } = await fetch('/.netlify/functions/sendit', {
-        
       //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
-
+      
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
 
-      mode: 'cors', // netlify: cors???
-      //mode: 'no-cors', // local dev: no-cors!!!
+      //mode: 'cors', // netlify: cors???
+      mode: 'no-cors', // local dev: no-cors!!!
 
       cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
       credentials: 'same-origin', // include, *same-origin, omit

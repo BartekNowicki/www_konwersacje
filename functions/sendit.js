@@ -6,6 +6,8 @@ const nodemailer = require('nodemailer');
 
 exports.handler = async (event, context) => {
 
+    console.log('serverless handler initiated ');
+
     const showInfo = (intro = 'show info: ', msg = '\n you did not write anything non default to show here...') => {
     console.log('----------------------------------------');
     console.log(intro, msg);
@@ -29,7 +31,8 @@ exports.handler = async (event, context) => {
   try {
 
     transporter.sendMail({
-        from: 'angielskikonwersacjeeu@gmail.com',
+        from: 'bartosznowickihq@gmail.com',
+        // from: 'angielskikonwersacjeeu@gmail.com',
         to: 'angielskikonwersacjeeu@gmail.com',
         subject: `you've got mail :)`,
         html: `<p>${JSON.stringify(mailContent)}</p>`
