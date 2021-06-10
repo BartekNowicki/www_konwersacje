@@ -5,11 +5,10 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
   
 
   try {
+      
+      //const { status } = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
 
-      //2 items to switch: cors and fetch
-      const { status } = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
-
-      //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
+      const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
       
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
 

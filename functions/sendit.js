@@ -22,8 +22,8 @@ exports.handler = async (event, context) => {
     
     let transporter = nodemailer.createTransport({
         host: 'smtp.gmail.com',
-    port: 465,
-    secure: true, // use SSL
+        port: 465,
+        secure: true, // use SSL
         auth: {            
             user: process.env.GATSBY_EMAIL_LOGIN,
             pass: process.env.GATSBY_EMAIL_PASS        
