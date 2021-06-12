@@ -6,6 +6,7 @@ module.exports = {
     keywords: `angielski, konwersacje, Warszawa, native`,
   },
   plugins: [
+       
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

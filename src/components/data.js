@@ -3,6 +3,7 @@ const data = {
     text2: 'język angielski',
     text3: 'dwujęzyczny tłumacz konferencyjny',
     text4: '20 lat doświadczenia',
+    
     text6: 'zaprasza na konwersacje prowadzone w języku angielskim',
     text7: 'Warszawa',
     text8: 'metoda i założenia teoretyczne',
