@@ -3,9 +3,9 @@ const data = {
     text2: 'język angielski',
     text3: 'dwujęzyczny tłumacz konferencyjny',
     text4: '20 lat doświadczenia',
-    
-    text6: 'zaprasza na konwersacje prowadzone w języku angielskim',
-    text7: 'Warszawa',
+    text5: 'zapraszam na konwersacje z języka angielskiego',
+    text6: 'Konwersacje prowadzę po angielsku',
+    text7: 'Rozmawiamy na różne tematy i omawiamy zastosowanie gramatycznych oraz leksykalnych form językowych, z rejestru potocznego, średniego oraz oficjalnego, w zależności od Twoich potrzeb i na Twoim poziomie zaawansowania',
     text8: 'metoda i założenia teoretyczne',
     text81: 'lexical approach and contextual learning przy szczególnej uwadze poświęconej eliminacji tzw. Polglish czyli interferencji języka polskiego podczas uczenia się i posługiwania się językiem obcym. Przykładem Polglish może być dość powszechny wśród Polaków zwrot "so, how to say this?" zamiast "so, how do you say it?" ',
     text82: 'nauka wspomagana progamistycznie (gry, baza danych fraz, konto ucznia, możliwość sprawdzania wiedzy poprzez testy online)',

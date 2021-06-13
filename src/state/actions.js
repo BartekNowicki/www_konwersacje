@@ -32,4 +32,11 @@
         }
     }
 
+    export const actionChangeOrientation = (isPortrait = true) => {        
+        return {
+            type: 'NEW_ORIENTATION',
+            payload: isPortrait
+        }
+    }
+
     

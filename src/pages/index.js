@@ -10,14 +10,21 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import myStore  from '../state/createStore'
 import Footer from "../components/Footer"
+
+import checkOrientationAndsetupResizeListener from "../utils/checkOrientationAndsetupResizeListener"
+
+
 import { Provider } from 'react-redux'
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
 
 const IndexPage = () => {
-    
+
+      
   const store = myStore();
+
+  checkOrientationAndsetupResizeListener(store);
   
   return (
 

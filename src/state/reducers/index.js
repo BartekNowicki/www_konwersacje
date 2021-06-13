@@ -4,6 +4,8 @@ import changeMessage from './messageChanger'
 import openMenu from './menuOpener'
 import changeLocation from './locationChanger'
 import changeIsFormSent from './formIsSentChanger'
+import changeOrientation from './orientationChanger'
+
 
 
 
@@ -13,6 +15,7 @@ export default combineReducers({
   isMenuOpen: openMenu,
   location: changeLocation,
   isFormSent: changeIsFormSent,
+  isPortrait: changeOrientation
 });
 
 
