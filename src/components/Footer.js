@@ -1,12 +1,19 @@
 import * as React from "react"
 
+
 const Footer = () => (
-  <footer style={{ 
-    marginTop: `2rem`, 
-    border: '1px solid black',
-    color: 'gray',
-    fontSize: '0.8rem'}}>
-      © {new Date().getFullYear()} Bartosz Nowicki Center For Convesational Language Development
+  <footer style={{
+      backgroundColor: 'black',    
+      border: '1px solid gray',
+      padding: '2vw',
+      display: 'flex',
+      justifyContent: 'center'
+      }}>
+      <p style={{
+      color: 'gray',
+      fontSize: '2vw',
+      padding: '3vw'      
+      }}>© 2001 - {new Date().getFullYear()} Bardo Bartosz Nowicki Center For Conversational Language Development</p>
   </footer>
 )
 

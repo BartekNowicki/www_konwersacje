@@ -2,11 +2,11 @@ import React from 'react'
 import { Text } from "./Text"
 import MyFormik from "./myFormik"
 
-const Section6 = () => {
+const Section6 = ({ sectionID }) => {
 
     return (
 
-        <div className = "pageSection">
+        <div id = { sectionID } className = "pageSection">
 
             <div className = "mainTextWrapper">
 

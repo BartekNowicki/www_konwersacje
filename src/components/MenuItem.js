@@ -3,9 +3,23 @@ import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen, actionChangeLocation } from '../state/actions'
 import board from '../images/board.svg'
 import { gsap } from "gsap"
+import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
+gsap.registerPlugin(ScrollToPlugin);
 
 
 const MenuItem = ({ name }) => {
+
+    const scrollToLocation = (nameID) => {
+
+        //protection clause for the Gatsby build process, where window does not exist
+        if (typeof window === 'undefined') return
+
+        if (nameID === "menu") return
+
+        gsap.to(window, {duration: 2, scrollTo: `#${nameID}ID`});
+    }
+
+
 
     //console.log('MENU ITEM RENDERED ', name);    
 
@@ -24,8 +38,8 @@ const MenuItem = ({ name }) => {
         name === "menu" 
         ? dispatch(actionChangeIsMenuOpen(true))
         : dispatch(actionChangeLocation(name));
-
-        gsap.to(".menuItems", {rotation: 27, x: 100, duration: 1});
+       
+        scrollToLocation(name);        
     }
 
     

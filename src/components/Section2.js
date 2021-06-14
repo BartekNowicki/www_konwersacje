@@ -2,10 +2,10 @@ import React from 'react'
 import { Text } from "./Text"
 import data from "../components/data"
 
-const Section2 = () => {
+const Section2 = ({ sectionID }) => {
 
     return (
-        <div className = "pageSection">
+        <div id = { sectionID } className = "pageSection">
 
             <div className = "mainTextWrapper">
 

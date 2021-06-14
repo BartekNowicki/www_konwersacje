@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MenuItem from "./MenuItem"
 import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen } from '../state/actions'
+import data from "../components/data"
 
 
 const MenuItems = ({ open }) => {
@@ -27,13 +28,13 @@ const MenuItems = ({ open }) => {
     return open ? 
     (
         <div className = "menuItems">
-            <MenuItem text = 'konwersacje' name = 'konwersacje'/>
-            <MenuItem text = 'metoda' name = 'metoda'/>
-            <MenuItem text = 'o mnie' name = 'omnie'/>
-            <MenuItem text = 'cennik' name = 'cennik'/>
-            <MenuItem text = 'lokalizacja' name = 'lokalizacja'/>
-            <MenuItem text = 'zapisy' name = 'zapisy'/>
-            <MenuItem text = 'faq' name = 'faq'/>
+            <MenuItem text = { data.menu1 } name = { data.menu1 }/>
+            <MenuItem text = { data.menu2 } name = { data.menu2 }/>
+            <MenuItem text = { data.menu3 } name = { data.menu3 }/>
+            <MenuItem text = { data.menu4 } name = { data.menu4 }/>
+            <MenuItem text = { data.menu5 } name = { data.menu5 }/>
+            <MenuItem text = { data.menu6 } name = { data.menu6 }/>
+            <MenuItem text = { data.menu7 } name = { data.menu7 }/>
             <div className = 'menuCloseBtn' name = 'menuCloseBtn' onClick={ handleCloseClick } ></div>
         </div>
     ) : (

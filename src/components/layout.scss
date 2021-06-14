@@ -9,28 +9,33 @@ html {
 .mainWrapper {
     //border: 1px solid red;
     height: 700vh;
+    //includes all but the footer
 }
 
 .pageSection {
-    border: 1px solid rgb(54, 73, 3);
+    border: 1px solid rgb(46, 73, 3);
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    & p + p {
-      //color: red;
-      @include paragraphStyle;        
-    }
+    // & p + p {
+    //   //color: red;
+    //   @include paragraphStyle;   
+    // }
 }
 
 .pageSectionTitle {
     font-family: $primary-font, cursive;
     text-transform: uppercase;
     color: black;
-    font-size: 4vw;
+    font-size: 14px;
     font-weight: bold;
     align-self: center;
-    margin: 3vw;
+    margin: 1vw;
+    @media (min-width: 800px) {
+      font-size: 4vw;
+      margin: 2vw;
+    }  
 }
 
 .mainTextWrapper {
@@ -39,13 +44,13 @@ html {
     flex-direction: column;
     flex-grow: 1;
     justify-content: flex-start;
-    padding: 5vw;
+    padding: 3vw;
     & p + p {
         //color: red;
+        letter-spacing: normal;
         @include paragraphStyle;        
     }
+    @media (min-width: 800px) {
+      padding: 4vw;
+    }  
 }
-
-// [name = 'text_1'] {
-//     color: red;
-// }

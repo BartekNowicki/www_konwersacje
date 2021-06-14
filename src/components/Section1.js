@@ -2,10 +2,10 @@ import React from 'react'
 import { Campsite } from "../components/Campsite"
 
 
-const Section1 = () => {
+const Section1 = ({ sectionID }) => {
 
     return (
-        <div className = "pageSection">
+        <div id = { sectionID } className = "pageSection">
             <Campsite/>
         </div>
     ) 

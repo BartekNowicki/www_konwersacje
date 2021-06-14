@@ -1,6 +1,10 @@
 @mixin paragraphStyle {
     //color: red;
-    margin-top: 5vw;
-    font-family: $secondary-font;
-    font-size: 3vw;
+    margin-top: 10px;
+    font-family: $secondary-font;    
+    font-size: 12px;
+    @media (min-width: 800px) {
+      font-size: 18px;
+      margin-top: 12px;
+    }  
 }

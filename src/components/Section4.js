@@ -1,10 +1,10 @@
 import React from 'react'
 import { Text } from "./Text"
 
-const Section4 = () => {
+const Section4 = ({ sectionID }) => {
 
     return (
-        <div className = "pageSection">
+        <div id = { sectionID } className = "pageSection">
 
             <div className = "mainTextWrapper">
                 <Text tag = 'p' text = 'cennik' name = 'cennik' classN = 'pageSectionTitle'/>

@@ -1,5 +1,4 @@
 import * as React from "react"
-import { gsap } from "gsap"
 import Section1 from "../components/Section1"
 import Section2 from "../components/Section2"
 import Section3 from "../components/Section3"
@@ -11,6 +10,7 @@ import Seo from "../components/seo"
 import Layout from "../components/layout"
 import myStore  from '../state/createStore'
 import Footer from "../components/Footer"
+import data from "../components/data"
 
 import checkOrientationAndsetupResizeListener from "../utils/checkOrientationAndsetupResizeListener"
 
@@ -35,13 +35,13 @@ const IndexPage = () => {
       <Layout>
 
         <Seo title="Home" />
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
-        <Section7 />
+        <Section1 sectionID = {data.menu1+'ID'}/>
+        <Section2 sectionID = {data.menu2+'ID'}/>
+        <Section3 sectionID = {data.menu3+'ID'}/>
+        <Section4 sectionID = {data.menu4+'ID'}/>
+        <Section5 sectionID = {data.menu5+'ID'}/>
+        <Section6 sectionID = {data.menu6+'ID'}/>
+        <Section7 sectionID = {data.menu7+'ID'}/>
         <Footer />
 
       </Layout>

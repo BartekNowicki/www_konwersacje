@@ -1,9 +1,16 @@
 const data = {
+    menu1: 'konwersacje',
+    menu2: 'metoda',
+    menu3: 'omnie',
+    menu4: 'cennik',
+    menu5: 'lokalizacja',
+    menu6: 'zapisy',
+    menu7: 'faq',
     text1: 'konwersacje',
     text2: 'język angielski',
     text3: 'dwujęzyczny tłumacz konferencyjny',
     text4: '20 lat doświadczenia',
-    text5: 'let\'s get you talkin\' !',
+    text5: 'let\'s get ya talkin\' !',
     text51: 'Konwersacje prowadzę po angielsku',
     text52: 'Rozmawiamy na wybrane, ustalone i przygotowane tematy lub spontanicznie',
     text53: 'Omawiamy zastosowanie gramatycznych oraz leksykalnych form językowych rejestru potocznego, średniego oraz oficjalnego', 
@@ -25,6 +32,9 @@ const data = {
 };
 
 export default data;
+
+
+
 
 
 
