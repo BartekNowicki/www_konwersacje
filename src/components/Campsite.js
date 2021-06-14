@@ -10,6 +10,9 @@ import data from "../components/data"
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {
 
+    //protection clause for the Gatsby build process, where window does not exist
+    if (typeof window === 'undefined') return
+
     const campsiteSvg = document.querySelector('.campsiteSvg');   
 
     const originalSvgRatio = 2000 / 1000;
