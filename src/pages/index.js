@@ -1,4 +1,5 @@
 import * as React from "react"
+import { gsap } from "gsap"
 import Section1 from "../components/Section1"
 import Section2 from "../components/Section2"
 import Section3 from "../components/Section3"
@@ -21,6 +22,7 @@ import { Provider } from 'react-redux'
 
 const IndexPage = () => {
 
+  
       
   const store = myStore();
 

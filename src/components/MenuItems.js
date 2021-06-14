@@ -1,14 +1,28 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import MenuItem from "./MenuItem"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen } from '../state/actions'
 
 
 const MenuItems = ({ open }) => {
 
+    //console.log('MENU ITEMS RENDERED');
+
     const dispatch = useDispatch();
 
+    const [timeToRerender, setTimeToRerender] = useState(false);
+
+    const location = useSelector((state) => state.location);  
+
     const handleCloseClick = () => dispatch(actionChangeIsMenuOpen(false));
+
+    useEffect(() => {
+        
+        setTimeToRerender(true);
+        
+    }, [location])
+
+
 
     return open ? 
     (

@@ -5,7 +5,11 @@ const Section5 = () => {
 
    return (
         <div className = "pageSection">
-            <Text tag = 'p' text = 'lokalizacja' name = 'lokalizacja' classN = 'pageSectionTitle'/>
+
+            <div className = "mainTextWrapper">
+                <Text tag = 'p' text = 'lokalizacja' name = 'lokalizacja' classN = 'pageSectionTitle'/>
+            </div>
+            
         </div>
     )
 }

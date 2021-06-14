@@ -6,6 +6,7 @@ import { Text } from "../components/Text"
 // import MenuItem from "./MenuItem"
 import  MenuItems from "./MenuItems"
 import data from "../components/data"
+//import "./layout.scss"
 
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {
@@ -17,11 +18,11 @@ const scaleAndgetCampsiteSvgHeight = (portrait) => {
 
     const originalSvgRatio = 2000 / 1000;
 
-    const weirdEmpiricalPart = 0.4;
+    const weirdEmpiricalPart = 0.4; //0.2 is to small when deployed
 
     const factor = portrait ? 1 : Number((1 + (originalSvgRatio - window.innerWidth / window.innerHeight)).toFixed(1)) + weirdEmpiricalPart;
 
-    console.log('campsiteSvg scaled by ', factor);
+    //console.log('campsiteSvg scaled by ', factor);
 
     campsiteSvg.style.transform = `scale(${factor})`;
 
@@ -43,8 +44,10 @@ export const Campsite = () => {
     const applyHeightLandscape = '100%';
 
     let heroTextWrapperStyle = portrait
-        ? { borderColor: 'red', height: `${applyHeightPortrait}` }
-        : { borderColor: 'blue', height: `${applyHeightLandscape}` }
+        ? { height: `${applyHeightPortrait}` }
+        : { height: `${applyHeightLandscape}` }
+
+        //{ borderColor: 'red', height: `${applyHeightPortrait}` }
 
 
     const positionComponentContent = () => {
@@ -59,15 +62,13 @@ export const Campsite = () => {
 
         heightAfterScaling = Math.floor(heightAfterScaling - window.innerWidth * 0.03);
 
-        console.log(heightAfterScaling);
+        //console.log(heightAfterScaling);
 
-        document.querySelector('.heroTextWrapper').style.height = heightAfterScaling + 'px';
-
-        
+        document.querySelector('.heroTextWrapper').style.height = heightAfterScaling + 'px';        
 
         heroTextWrapperStyle = portrait
-        ? { borderColor: 'red', height: `${applyHeightPortrait}` }
-        : { borderColor: 'blue', height: `${applyHeightLandscape}` }
+        ? { height: `${applyHeightPortrait}` }
+        : { height: `${applyHeightLandscape}` }
     }            
     
     
@@ -82,7 +83,7 @@ export const Campsite = () => {
         
         setRenderCount(renderCount + 1);
 
-        console.log('orientation change, rerendering for the nth time: ', renderCount);
+        //console.log('orientation change, rerendering for the nth time: ', renderCount);
 
         positionComponentContent();    
 
@@ -104,9 +105,12 @@ export const Campsite = () => {
             <Text tag = 'h4' text = {data.text4} name = 'text_4'/>
         </div>
         {portrait && <div className = "mainTextWrapper">
-            <Text tag = 'h5' text = {data.text5} name = 'text_5'/>
-            <Text tag = 'p' text = {data.text6} name = 'text_6'/>
-            <Text tag = 'p' text = {data.text7} name = 'text_7'/>
+            <Text tag = 'p' classN = "pageSectionTitle" text = {data.text5} name = 'text_5'/>
+            <Text tag = 'p' text = {data.text51} name = 'text_51'/>
+            <Text tag = 'p' text = {data.text52} name = 'text_52'/>
+            <Text tag = 'p' text = {data.text53} name = 'text_53'/>
+            <Text tag = 'p' text = {data.text54} name = 'text_54'/>
+            <Text tag = 'p' text = {data.text55} name = 'text_55'/>
         </div>}
         
     </div>

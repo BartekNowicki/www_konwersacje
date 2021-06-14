@@ -5,9 +5,17 @@ import MyFormik from "./myFormik"
 const Section6 = () => {
 
     return (
+
         <div className = "pageSection">
-            <Text tag = 'p' text = 'zapisy i kontakt' name = 'zapisy' classN = 'pageSectionTitle'/>
-            <MyFormik />
+
+            <div className = "mainTextWrapper">
+
+                <Text tag = 'p' text = 'zapisy i kontakt' name = 'zapisy' classN = 'pageSectionTitle'/>
+
+                <MyFormik />
+
+            </div>            
+            
         </div>
     )
 }

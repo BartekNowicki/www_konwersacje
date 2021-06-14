@@ -4,8 +4,15 @@ import { Text } from "./Text"
 const Section7 = () => {
 
     return (
+
         <div className = "pageSection">
-            <Text tag = 'p' text = 'często zadawane pytania' name = 'faq' classN = 'pageSectionTitle'/>
+
+            <div className = "mainTextWrapper">
+
+                <Text tag = 'p' text = 'często zadawane pytania' name = 'faq' classN = 'pageSectionTitle'/>
+
+            </div>
+            
         </div>
     )
 }

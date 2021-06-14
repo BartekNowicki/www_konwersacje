@@ -1,4 +1,4 @@
-const changeLocation = (state = 'top', action) => {
+const changeLocation = (state = 'konwersacje', action) => {
   switch (action.type) {
     case 'NEW_LOCATION':
       return action.payload

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 @import '_variables';
-
+@import '_mixins';
 
 .campsiteWrapper {
     // border: 5px solid rgb(241, 228, 33);
@@ -17,7 +17,7 @@
     flex-direction: column;  
     overflow: hidden;
     position: relative;
-    border: 5px solid rgb(0, 0, 0);
+    //border: 5px solid rgb(0, 0, 0);
     width: 100%;
     height: 100%;
 }
@@ -27,23 +27,24 @@
     width: 100%;
     height: auto;
     @media (orientation: landscape) {
-      border: 5px solid rgb(5, 7, 160);
+      //border: 5px solid rgb(5, 7, 160);
     }  
 }
 
 .heroTextWrapper {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
-    //height: 100%;
-    border: 3px solid rgb(23, 160, 5);    
+    right: 0;
+    width: 75%;
+    //height: calculated in js
+    max-height: 100%;
+    //border: 3px solid rgb(23, 160, 5);
 }
 
 [name = "text_1"] {
     //konwersacje  
     position: absolute;
-    top: 10%;
+    top: 5%;
     right: 10%;
     font-size: 6vw;
     color: $orange;
@@ -55,7 +56,7 @@
 [name = "text_2"] {
     //język angielski    
     position: absolute;
-    top: 35%;
+    top: 25%;
     right: 10%;
     font-size: 3vw;
     color: $smoke;
@@ -67,7 +68,7 @@
 [name = "text_3"] {
     //dwujęzyczny tłumacz konferencyjny
     position: absolute;
-    top: 50%;
+    top: 45%;
     right: 10%;
     font-size: 4vw;
     color: $yellow;
@@ -79,7 +80,7 @@
 [name = "text_4"] {
     //20 lat doświadczenia
     position: absolute;
-    top: 70%;
+    top: 60%;
     right: 10%;
     font-size: 4vw;
     color: $green;
@@ -88,33 +89,7 @@
     border-radius: 10px;    
 }
 
-.mainTextWrapper {
-    border: 5px solid rgb(103, 5, 160);
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-start;
-    padding: 20px;    
-}
 
-[name = "text_5"] {    
-    font-size: 4vw;
-    margin: 0 auto;
-    font-family: $secondary-font;
-    //color: $green;    
-    //padding: 1vw 4vw;
-    //border-radius: 10px;   
-}
-
-[name = "text_6"] {   
-    font-family: $secondary-font;
-    font-size: 3vw;
-}
-
-[name = "text_7"] {    
-    font-family: $secondary-font;
-    font-size: 3vw;
-}
 
 .menuItems {
     // border: 1px solid rebeccapurple;
@@ -126,6 +101,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    z-index: 1;
     // overflow: hidden;
     @media (max-width: 640px) {
         transform: scale(0.9) translate(-40px, -10px);
@@ -188,8 +164,11 @@
     @media (min-width: 800px) {
         font-size: 20px;
         bottom: 16%;
-    }
-    
+    }    
+}
+
+.active {
+    color: black;
 }
 
 
