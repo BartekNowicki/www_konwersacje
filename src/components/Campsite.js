@@ -17,7 +17,7 @@ const scaleAndgetCampsiteSvgHeight = (portrait) => {
 
     const originalSvgRatio = 2000 / 1000;
 
-    const weirdEmpiricalPart = 0.2;
+    const weirdEmpiricalPart = 0.4;
 
     const factor = portrait ? 1 : Number((1 + (originalSvgRatio - window.innerWidth / window.innerHeight)).toFixed(1)) + weirdEmpiricalPart;
 
