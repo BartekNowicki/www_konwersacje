@@ -11,11 +11,16 @@ const data = {
     text3: 'dwujęzyczny tłumacz konferencyjny',
     text4: '20 lat doświadczenia',
     text5: 'let\'s get ya talkin\' !',
-    text51: 'Konwersacje prowadzę po angielsku',
-    text52: 'Rozmawiamy na wybrane, ustalone i przygotowane tematy lub spontanicznie',
-    text53: 'Omawiamy zastosowanie gramatycznych oraz leksykalnych form językowych rejestru potocznego, średniego oraz oficjalnego', 
-    text54: 'Porównujemy podobne zwroty wyrażone w różnych rejestrach i stosowane w różnych sytuacjach',
-    text55: 'Dostosowujemy zajęcia do Twoich potrzeb i Twojego poziomu zaawansowania',
+    text51a: 'konwersacje',
+    text51b: 'prowadzimy tylko po angielsku',
+    text52a: 'rozmawiamy',
+    text52b: 'spontanicznie lub na przygotowane tematy',
+    text53a: 'omawiamy', 
+    text53b: 'zwroty i sformułowania, a gramatykę tylko dla eliminacji błędów',
+    text54a: 'porównujemy',
+    text54b: 'rejestr potoczny z oficjalnym',
+    text55a: 'dostosowujemy',
+    text55b: 'zajęcia do Twoich potrzeb i poziomu zaawansowania',
     text8: 'metoda i założenia teoretyczne',
     text81: 'lexical approach and contextual learning przy szczególnej uwadze poświęconej eliminacji tzw. Polglish czyli interferencji języka polskiego podczas uczenia się i posługiwania się językiem obcym. Przykładem Polglish może być dość powszechny wśród Polaków zwrot "so, how to say this?" zamiast "so, how do you say it?" ',
     text82: 'nauka wspomagana progamistycznie (gry, baza danych fraz, konto ucznia, możliwość sprawdzania wiedzy poprzez testy online)',
@@ -33,6 +38,18 @@ const data = {
 
 export default data;
 
+//zapisy
+
+//grupy są małe, max 5 osób, więc ilość miejsc jest bardzo ograniczona.
+//Aby móc wziąć udział w zajęciach, musisz mieć komunikatywny angielski
+//czyli w miarę swobodnie wyrażać myśli
+
+//grupy
+// grupa standard 1xtyg  wt 19 - 20
+// grupa business 1xtyg  wt 20 - 21
+// grupa intensywna 2xtyg pn czw 19 - 20
+// grupa specjalistyczna - angielski w IT sr 19 - 20
+// zajecia indywidualne - w godzinach 9 - 15
 
 
 

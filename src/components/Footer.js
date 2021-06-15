@@ -12,7 +12,8 @@ const Footer = () => (
       <p style={{
       color: 'gray',
       fontSize: '2vw',
-      padding: '3vw'      
+      padding: '3vw',
+      fontFamily: 'Roboto Condensed'  
       }}>© 2001 - {new Date().getFullYear()} Bardo Bartosz Nowicki Center For Conversational Language Development</p>
   </footer>
 )

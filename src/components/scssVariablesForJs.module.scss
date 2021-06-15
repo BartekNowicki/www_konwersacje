@@ -1,0 +1,11 @@
+@import '_variables';
+
+:export {
+  scssPrimaryFont: $primary-font;
+  scssSecondaryFont: $secondary-font;
+  scssSmoke: $smoke;
+  scssOrange: $orange;
+  scssYellow: $yellow;
+  scssGreen: $green;
+  scssBlack: $black;
+}

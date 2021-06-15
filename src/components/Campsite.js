@@ -3,14 +3,19 @@ import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import './campsite.scss';
 import { Text } from "../components/Text"
-// import MenuItem from "./MenuItem"
+import Texter from "../components/Texter"
+import Face from "../components/Face"
 import  MenuItems from "./MenuItems"
 import data from "../components/data"
 //import "./layout.scss"
 
+import * as scssVariables from './scssVariablesForJs.module.scss'
+//console.log('testVariable', scssVariables.scssPrimaryFont);
+
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {
 
+    
     //protection clause for the Gatsby build process, where window does not exist
     if (typeof window === 'undefined') return
 
@@ -88,7 +93,15 @@ export const Campsite = () => {
         positionComponentContent();    
 
     },[portrait]);
-    
+
+    const styleOverride = { backgroundColor: scssVariables.scssBlack }
+
+    const styles1 = { position: 'absolute', top: '9%', left: '20px' }
+    const styles2 = { position: 'absolute', top: '22%', left: '20px' }
+    const styles3 = { position: 'absolute', top: '35%', left: '20px' }
+    const styles4 = { position: 'absolute', top: '48%', left: '20px' }
+    const styles5 = { position: 'absolute', top: '61%', left: '20px' }
+
     
     return (
 
@@ -99,18 +112,20 @@ export const Campsite = () => {
         <MenuItems open = { isMenuOpen }/>
 
         <div className = "heroTextWrapper" style = { heroTextWrapperStyle }>
-            <Text tag = 'h1' text = {data.text1} name = 'text_1'/>
-            <Text tag = 'h3' text = {data.text2} name = 'text_2'/>
-            <Text tag = 'h2' text = {data.text3} name = 'text_3'/>
-            <Text tag = 'h4' text = {data.text4} name = 'text_4'/>
+            <Text tag = 'h1' text = { data.text1 } name = 'text_1'/>
+            <Text tag = 'h3' text = { data.text2 } name = 'text_2'/>
+            <Text tag = 'h2' text = { data.text3 } name = 'text_3'/>
+            <Text tag = 'h4' text = { data.text4 } name = 'text_4'/>
         </div>
-        {portrait && <div className = "mainTextWrapper">
-            <Text tag = 'p' classN = "pageSectionTitle" text = {data.text5} name = 'text_5'/>
-            <Text tag = 'p' text = {data.text51} name = 'text_51'/>
-            <Text tag = 'p' text = {data.text52} name = 'text_52'/>
-            <Text tag = 'p' text = {data.text53} name = 'text_53'/>
-            <Text tag = 'p' text = {data.text54} name = 'text_54'/>
-            <Text tag = 'p' text = {data.text55} name = 'text_55'/>
+        {portrait && <div className = "mainTextWrapper" style = { styleOverride }>
+            <Text tag = 'p' classN = "pageSectionTitle" text = { data.text5 } name = 'text_5'/>
+            <Texter texterStyles = { styles1 } textTop = { data.text51a }  textBottom = { data.text51b }/>
+            <Texter texterStyles = { styles2 } textTop = { data.text52a }  textBottom = { data.text52b }/>
+            <Texter texterStyles = { styles3 } textTop = { data.text53a }  textBottom = { data.text53b }/>
+            <Texter texterStyles = { styles4 } textTop = { data.text54a }  textBottom = { data.text54b }/>
+            <Texter texterStyles = { styles5 } textTop = { data.text55a }  textBottom = { data.text55b }/>
+            
+            <Face />
         </div>}
         
     </div>

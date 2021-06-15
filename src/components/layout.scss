@@ -32,6 +32,10 @@ html {
     font-weight: bold;
     align-self: center;
     margin: 1vw;
+    &[name="text_5"] {
+        color: #FEC303;
+        z-index: 1;
+    }
     @media (min-width: 800px) {
       font-size: 4vw;
       margin: 2vw;
@@ -39,6 +43,7 @@ html {
 }
 
 .mainTextWrapper {
+    position: relative; //just added this to align get ya talking test, see if it breaks anything
     //border: 5px solid rgb(103, 5, 160);
     display: flex;
     flex-direction: column;
@@ -53,4 +58,13 @@ html {
     @media (min-width: 800px) {
       padding: 4vw;
     }  
+}
+
+.texter {
+    display: flex;
+    flex-direction: column;    
+    border: 0px solid red;
+    border-radius: 10px;
+    background-color: black;
+    padding: 2vw;
 }

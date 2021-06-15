@@ -8,9 +8,9 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       
       //const { status } = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
 
-      //const { status } = await fetch('/.netlify/functions/sendit', {
+      const { status } = await fetch('/.netlify/functions/sendit', {
 
-      const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
+      //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {
       
       method: 'POST', // *GET, POST, PUT, DELETE, etc.
       
