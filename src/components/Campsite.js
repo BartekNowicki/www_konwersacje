@@ -7,14 +7,10 @@ import Texter from "../components/Texter"
 import Face from "../components/Face"
 import  MenuItems from "./MenuItems"
 import data from "../components/data"
-//import "./layout.scss"
-
 import * as scssVariables from './scssVariablesForJs.module.scss'
-//console.log('testVariable', scssVariables.scssPrimaryFont);
 
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {
-
     
     //protection clause for the Gatsby build process, where window does not exist
     if (typeof window === 'undefined') return
@@ -95,13 +91,68 @@ export const Campsite = () => {
     },[portrait]);
 
     const styleOverride = { backgroundColor: scssVariables.scssBlack }
+        
+    const texters = [
+        {
+            id: 0,
+            styles: { position: 'absolute', top: '9%', left: '20px' },
+            textTop : data.text51a,
+            textBottom: data.text51b,
+        },
+        {   id: 1,
+            styles: { position: 'absolute', top: '22%', left: '20px' },
+            textTop: data.text52a,
+            textBottom: data.text52b,
+        },
+        {
+            id: 2,
+            styles: { position: 'absolute', top: '35%', left: '20px' },
+            textTop: data.text53a,
+            textBottom: data.text53b,
+        },
+        {
+            id: 3,
+            styles: { position: 'absolute', top: '48%', left: '20px' },
+            textTop: data.text54a,
+            textBottom: data.text54b,
+        },
+        {
+            id: 4,
+            styles: { position: 'absolute', top: '61%', left: '20px' },
+            textTop: data.text55a,
+            textBottom: data.text55b,
+        },
+    ];
 
-    const styles1 = { position: 'absolute', top: '9%', left: '20px' }
-    const styles2 = { position: 'absolute', top: '22%', left: '20px' }
-    const styles3 = { position: 'absolute', top: '35%', left: '20px' }
-    const styles4 = { position: 'absolute', top: '48%', left: '20px' }
-    const styles5 = { position: 'absolute', top: '61%', left: '20px' }
+    const heroTexts = [
+        {
+            id: 0,
+            tag: 'h1',
+            text: data.text1,
+            name: 'text_1',
+        },
+        {
+            id: 1,
+            tag: 'h3',
+            text: data.text2,
+            name: 'text_2',
+        },
+        {
+            id: 2,
+            tag: 'h2',
+            text: data.text3,
+            name: 'text_3',
+        },
+        {
+            id: 3,
+            tag: 'h4',
+            text: data.text4,
+            name: 'text_4',
+        }
+    
+    ];
 
+    
     
     return (
 
@@ -112,20 +163,19 @@ export const Campsite = () => {
         <MenuItems open = { isMenuOpen }/>
 
         <div className = "heroTextWrapper" style = { heroTextWrapperStyle }>
-            <Text tag = 'h1' text = { data.text1 } name = 'text_1'/>
-            <Text tag = 'h3' text = { data.text2 } name = 'text_2'/>
-            <Text tag = 'h2' text = { data.text3 } name = 'text_3'/>
-            <Text tag = 'h4' text = { data.text4 } name = 'text_4'/>
+
+            { heroTexts.map(item => <Text key = { item.id } tag = { item.tag} text = { item.text } name = { item.name }/> ) }
+
         </div>
+
         {portrait && <div className = "mainTextWrapper" style = { styleOverride }>
+
             <Text tag = 'p' classN = "pageSectionTitle" text = { data.text5 } name = 'text_5'/>
-            <Texter texterStyles = { styles1 } textTop = { data.text51a }  textBottom = { data.text51b }/>
-            <Texter texterStyles = { styles2 } textTop = { data.text52a }  textBottom = { data.text52b }/>
-            <Texter texterStyles = { styles3 } textTop = { data.text53a }  textBottom = { data.text53b }/>
-            <Texter texterStyles = { styles4 } textTop = { data.text54a }  textBottom = { data.text54b }/>
-            <Texter texterStyles = { styles5 } textTop = { data.text55a }  textBottom = { data.text55b }/>
-            
+
+            { texters.map(item => <Texter key = { item.id } texterStyles = { item.styles } textTop = { item.textTop }  textBottom = { item.textBottom }/>) }
+                        
             <Face />
+
         </div>}
         
     </div>
