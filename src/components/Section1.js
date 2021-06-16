@@ -1,5 +1,7 @@
 import React from 'react'
 import { Campsite } from "../components/Campsite"
+import './Section1.scss';
+
 
 
 const Section1 = ({ sectionID }) => {

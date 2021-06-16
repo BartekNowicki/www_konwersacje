@@ -17,15 +17,11 @@ html {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
-    // & p + p {
-    //   //color: red;
-    //   @include paragraphStyle;   
-    // }
+    overflow: hidden;    
 }
 
 .pageSectionTitle {
-    font-family: $primary-font, cursive;
+    font-family: $primary-font;
     text-transform: uppercase;
     color: black;
     font-size: 14px;
@@ -39,7 +35,7 @@ html {
     @media (min-width: 800px) {
       font-size: 4vw;
       margin: 2vw;
-    }  
+    }
 }
 
 .mainTextWrapper {

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
-import './campsite.scss';
+// import './campsite.scss';
 import { Text } from "../components/Text"
 import Texter from "../components/Texter"
 import Face from "../components/Face"
@@ -88,7 +88,7 @@ export const Campsite = () => {
 
         positionComponentContent();    
 
-    },[portrait]);
+    }, [portrait]);
 
     const styleOverride = { backgroundColor: scssVariables.scssBlack }
         
@@ -152,7 +152,7 @@ export const Campsite = () => {
     
     ];
 
-    
+
     
     return (
 

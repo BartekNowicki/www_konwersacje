@@ -8,3 +8,10 @@
       margin-top: 12px;
     }  
 }
+
+@mixin methoderBckg {
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
