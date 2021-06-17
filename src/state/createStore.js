@@ -11,7 +11,27 @@ const myStore = () => {
     ? window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
     : funk => funk;
 
-  const store = createStore(rootReducer, compose(applyMiddleware(thunk), devtools));
+
+
+  ///////////////////////////////////
+  /// REDUX MIDDLEWARE START: logger
+  //////////////////////////////////
+  const logger = store => next => action => {
+    console.group(action.type)
+    console.info('dispatching', action)
+    let result = next(action)
+    console.log('next state', store.getState())
+    console.groupEnd();
+    return result
+  }
+  ///////////////////////////////////
+  /// REDUX MIDDLEWARE END logger
+  //////////////////////////////////
+
+  // BEFORE MIDDLEWARE logger, crashReporter
+  // const store = createStore(rootReducer, compose(applyMiddleware(thunk), devtools));
+
+  const store = createStore(rootReducer, compose(applyMiddleware(thunk, logger), devtools)); 
 
   return store;
 };

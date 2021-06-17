@@ -1,8 +1,11 @@
  import React from 'react';
+ import { Text } from "./Text"
+ import data from "../components/data"
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  import { useStore, useSelector } from 'react-redux'
  import { actionChangeEmail, actionChangeMessage, actionChangeFormSent } from '../state/actions'
  import sendEmail from '../utils/sendEmail'
+ import * as scssVariables from './scssVariablesForJs.module.scss'
  
 
  const BasicFormik = () => {
@@ -18,19 +21,21 @@
         // const dispatch = useDispatch(); both work, just saying...
     }
 
+    const errorStyles = {color: scssVariables.scssOrange, fontSize : '12px', textAlign: 'center', padding: '1vh'};
+    const confirmationStyles = {color: scssVariables.scssGreen, fontSize : '12px'};
+
     if (isFormSent) return (
       <>
-        <h1>Kontakt</h1>
-        <p>Dziękuję za wysłanie formularza, zwykle odpisuję tego samego dnia </p>
+        <Text tag = 'p' text = { data.textSection6_5 } styles = { confirmationStyles }/>        
       </>
     )
      
     return (
-
       
-     <div>
-     <h1>Kontakt</h1>
+     <>
+     
      <Formik
+
        initialValues={{ email: '', message: '' }}
        validate={values => {
          const errors = {};
@@ -61,14 +66,15 @@
        {({ isSubmitting }) => (
          <Form>
            <Field type="text" name="email" placeholder = 'komu odpisać?' onKeyUp = {(e) => store.dispatch(actionChangeEmail(e.target.value))}/>
-           <ErrorMessage name="email" component="div" />
-           <Field type="text" name="message" placeholder = 'skrobnij coś' onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))} />
-           <ErrorMessage name="message" component="div" />
-           <button type="submit" disabled={isSubmitting}> mejla ślij! </button>
+           <ErrorMessage style = { errorStyles } name="email" component="div" />
+           <Field type="textarea" name="message" placeholder = 'skrobnij coś' onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))} />
+           <ErrorMessage style = { errorStyles } name="message" component="div" />
+           <button type="submit" disabled={ isSubmitting }> mejla ślij! </button>
          </Form>
        )}
      </Formik>
-   </div>
+
+   </>
  )};
 
  export default BasicFormik;

@@ -10,23 +10,26 @@
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
-    gap: 0px 0px;
-    
+    gap: 0px 0px;    
     @media (orientation: landscape) {
       grid-template-rows: repeat(2, 1fr);
       grid-template-columns: repeat(3, 1fr);
-    }   
+    }
 }
 
 .gridderField {
     //border: 1px solid blue;
     //do not make it larger as it will not align on reseize
-    width: 90%;    
-    height: 90%;
+    width: 70%;    
+    height: 70%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
+    @media (orientation: landscape) {
+      width: 80%;    
+      height: 80%;
+    } 
 }
 
 .methoder {

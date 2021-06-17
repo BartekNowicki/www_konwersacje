@@ -12,6 +12,7 @@ import myStore  from '../state/createStore'
 import Footer from "../components/Footer"
 import data from "../components/data"
 
+
 import checkOrientationAndsetupResizeListener from "../utils/checkOrientationAndsetupResizeListener"
 
 
@@ -21,7 +22,6 @@ import { Provider } from 'react-redux'
 
 
 const IndexPage = () => {
-
   
       
   const store = myStore();

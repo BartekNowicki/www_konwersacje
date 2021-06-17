@@ -95,32 +95,32 @@ export const Campsite = () => {
     const texters = [
         {
             id: 0,
-            styles: { position: 'absolute', top: '9%', left: '20px' },
-            textTop : data.text51a,
-            textBottom: data.text51b,
+            styles: { position: 'absolute', top: '11%', left: '20px' },
+            textTop : data.textSection1_51a,
+            textBottom: data.textSection1_51b,
         },
         {   id: 1,
-            styles: { position: 'absolute', top: '22%', left: '20px' },
-            textTop: data.text52a,
-            textBottom: data.text52b,
+            styles: { position: 'absolute', top: '24%', left: '20px' },
+            textTop: data.textSection1_52a,
+            textBottom: data.textSection1_52b,
         },
         {
             id: 2,
-            styles: { position: 'absolute', top: '35%', left: '20px' },
-            textTop: data.text53a,
-            textBottom: data.text53b,
+            styles: { position: 'absolute', top: '37%', left: '20px' },
+            textTop: data.textSection1_53a,
+            textBottom: data.textSection1_53b,
         },
         {
             id: 3,
-            styles: { position: 'absolute', top: '48%', left: '20px' },
-            textTop: data.text54a,
-            textBottom: data.text54b,
+            styles: { position: 'absolute', top: '50%', left: '20px' },
+            textTop: data.textSection1_54a,
+            textBottom: data.textSection1_54b,
         },
         {
             id: 4,
-            styles: { position: 'absolute', top: '61%', left: '20px' },
-            textTop: data.text55a,
-            textBottom: data.text55b,
+            styles: { position: 'absolute', top: '63%', left: '20px' },
+            textTop: data.textSection1_55a,
+            textBottom: data.textSection1_55b,
         },
     ];
 
@@ -128,25 +128,25 @@ export const Campsite = () => {
         {
             id: 0,
             tag: 'h1',
-            text: data.text1,
+            text: data.textSection1_1,
             name: 'text_1',
         },
         {
             id: 1,
             tag: 'h3',
-            text: data.text2,
+            text: data.textSection1_2,
             name: 'text_2',
         },
         {
             id: 2,
             tag: 'h2',
-            text: data.text3,
+            text: data.textSection1_3,
             name: 'text_3',
         },
         {
             id: 3,
             tag: 'h4',
-            text: data.text4,
+            text: data.textSection1_4,
             name: 'text_4',
         }
     
@@ -170,7 +170,7 @@ export const Campsite = () => {
 
         {portrait && <div className = "mainTextWrapper" style = { styleOverride }>
 
-            <Text tag = 'p' classN = "pageSectionTitle" text = { data.text5 } name = 'text_5'/>
+            <Text tag = 'p' classN = "pageSectionTitle" text = { data.textSection1_5 } name = 'section1Title'/>
 
             { texters.map(item => <Texter key = { item.id } texterStyles = { item.styles } textTop = { item.textTop }  textBottom = { item.textBottom }/>) }
                         

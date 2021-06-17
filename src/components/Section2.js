@@ -16,51 +16,42 @@ const Section2 = ({ sectionID }) => {
     const methoders = [
         {
             id: 0,
-            text: data.text81a
+            text: data.textSection2_1a
         },
         {
             id: 1,
-            text: data.text82a
+            text: data.textSection2_2a
         },
         {
             id: 2,
-            text: data.text83a
+            text: data.textSection2_3a
         },
         {
             id: 3,
-            text: data.text84a
+            text: data.textSection2_4a
         },
         {
             id: 4,
-            text: data.text85a
+            text: data.textSection2_5a
         },
         {
             id: 5,
-            text: data.text86a
+            text: data.textSection2_6a
         }
     
     ];
 
     const gridderFieldRef = useRef();
 
-    const portrait = useSelector((state) => state.isPortrait);
-
-    // useEffect(() => {
-
-    //     const { width, height } = gridderFieldRef.current.getBoundingClientRect();
-    //     //const size = Math.min(Math.floor(width), Math.floor(height));
-    //     const size = Math.min(width, height);
-    //     console.log('size ', size);
-    //     setMethoderSize(size);
-    // }, []);
+    const portrait = useSelector((state) => state.isPortrait);    
 
     useEffect(() => {
 
-        console.log(gridderFieldRef.current);
+        //console.log(gridderFieldRef.current);
 
         const { width, height } = gridderFieldRef.current.getBoundingClientRect();
         const size = Math.floor(Math.min(width, height));
-        console.log('resize ', size);
+        //console.log('resize ', size);
         setMethoderSize(size);
     }, [portrait])
 
