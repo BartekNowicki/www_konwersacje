@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen, actionChangeLocation } from '../state/actions'
 import board from '../images/board.svg'
@@ -9,16 +9,28 @@ gsap.registerPlugin(ScrollToPlugin);
 
 const MenuItem = ({ name }) => {
 
-    const scrollToLocation = (nameID) => {
+    const scrollToLocation = useCallback(
+        (nameID) => {
+            //protection clause for the Gatsby build process, where window does not exist
+            if (typeof window === 'undefined') return
 
-        //protection clause for the Gatsby build process, where window does not exist
-        if (typeof window === 'undefined') return
+            if (nameID === "menu") return
 
-        if (nameID === "menu") return
+            gsap.to(window, {duration: 2, scrollTo: `#${nameID}ID`});
+        },
+        [],
+    );
 
-        gsap.to(window, {duration: 2, scrollTo: `#${nameID}ID`});
-    }
-
+    const handleClick = useCallback(
+        () => {
+            name === "menu" 
+        ? dispatch(actionChangeIsMenuOpen(true))
+        : dispatch(actionChangeLocation(name));
+       
+        scrollToLocation(name);  
+        },
+        [],
+    );
 
 
     //console.log('MENU ITEM RENDERED ', name);    
@@ -32,18 +44,6 @@ const MenuItem = ({ name }) => {
     !classNames.includes('active') && location === name 
         ? classNames.push('active')
         : classNames = classNames.filter(item => item !== 'active');
-        
-
-    const handleClick = () => {
-        name === "menu" 
-        ? dispatch(actionChangeIsMenuOpen(true))
-        : dispatch(actionChangeLocation(name));
-       
-        scrollToLocation(name);        
-    }
-
-    
-
     
 
     return (
