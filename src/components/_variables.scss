@@ -16,15 +16,11 @@ $black: #1D1D1D;
 $dark: #dbdbdb;
 
 
+$breakpoints: (
+  small : 640px,
+  medium: 800px,
+  large : 1200px,  
+);
 
 
 
-
-
-
-// $breakpoints: (
-//   xs: 360px,
-//   sm: 640px,
-//   md: 800px,
-//   lg: 1280px,
-// )

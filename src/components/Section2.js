@@ -65,7 +65,7 @@ const Section2 = ({ sectionID }) => {
 
             <div className = "mainTextWrapper" style = { styleOverride }>
 
-                <Text tag = 'p' text = 'metoda i założenia teoretyczne' name = 'metoda' classN = 'pageSectionTitle'/>
+                <Text tag = 'p' text = { data.textSection2_1 } name = 'metoda' classN = 'pageSectionTitle'/>
 
                 <article className = 'gridder'>
                     { methoders.map(item => <div ref = { item.id === 0 ? gridderFieldRef : null } key = { item.id } className='gridderField'> <Methoder text = { item.text } squareSize = { methoderSize } /></div> ) }

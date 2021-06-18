@@ -93,12 +93,13 @@
         font-size: 1.5vw;
         background-color: rgba(0, 0, 0, 0.6);
         border-radius: 20px;      
-        @media (max-width: 640px) {
-            font-size: 14px;
-            
+        @media (max-width: map-get($breakpoints, small)) {
+            font-size: 14px;            
         }
     }    
 }
+
+
 
 .decorator {
     position: absolute;

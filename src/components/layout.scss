@@ -53,8 +53,8 @@ html {
         //color: red;
         letter-spacing: normal;
         @include paragraphStyle;        
-    }
-    @media (min-width: 800px) {
+    }    
+    @media (min-width: map-get($breakpoints, medium)) {
       padding: 4vw;
     }  
 }
