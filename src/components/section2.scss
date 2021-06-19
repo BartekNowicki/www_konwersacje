@@ -17,6 +17,28 @@
     }
 }
 
+.gridderOverlay {
+    //border: 1px solid red;
+    position: fixed;
+    top: 0;
+    left: 0;
+    // width: 100vw;
+    // height: 100vh;
+    width: 0vw;
+    height: 0vh;
+    z-index: 1; //to match 'hey', which otherwise gets on top of it
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    & button {
+        width: 5vw;
+        height: 5vw;        
+        position: absolute;
+        top: 5vw;
+        right: 5vw;
+        @include closeBtn;
+    }
+}
+
 .gridderField {
     //border: 1px solid blue;
     //do not make it larger as it will not align on reseize
@@ -34,7 +56,8 @@
 
 .methoder {
     position: relative; //for its content text p below
-    //border: 1px solid violet;
+    //border: 1px solid violet; set border in @include methoderBckg;
+    cursor: pointer;
     border-radius: 20px;
     background-color: rgba(0, 0, 0, 0.9);    
     &:hover .decorator:nth-of-type(1) {            
@@ -98,8 +121,6 @@
         }
     }    
 }
-
-
 
 .decorator {
     position: absolute;

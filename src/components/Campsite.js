@@ -53,7 +53,7 @@ export const Campsite = () => {
 
     const positionComponentContent = () => {
 
-        console.log('POSITIONING COMPONENT CONTENT');
+        //console.log('POSITIONING COMPONENT CONTENT');
 
         //1) scale the campsiteSvg to cover a bit  more than necessary
         //2 read its height after scaling and return the height to 

@@ -10,7 +10,7 @@
 
  const BasicFormik = () => {
 
-    console.log('FORMIK KOMPONENT RENDERED');
+    //console.log('FORMIK KOMPONENT RENDERED');
     
     const store = useStore();
     const isFormSent = useSelector((state) => state.isFormSent);  

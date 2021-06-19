@@ -1,17 +1,40 @@
-import React, { useRef, useEffect, useState } from 'react'
+import React, { useRef, useEffect, useState, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { Text } from "./Text"
 import data from "../components/data"
-import Methoder from "../components/Methoder"
+import { Methoder, methoderTimeline } from "../components/Methoder"
 import './section2.scss';
 import * as scssVariables from './scssVariablesForJs.module.scss'
 
 
-const Section2 = ({ sectionID }) => {
 
+const Section2 = ({ sectionID }) => {
+    
     console.log('SECTION2 RENDERED');
 
     const [methoderSize, setMethoderSize] = useState(0);
+
+    const [newRender, setNewRender] = useState(0);
+
+    console.log('SECTION2 RENDERED', newRender);
+
+    const handleCloseClick = useCallback(
+        () => {
+            //console.log(methoderTimeline);
+            methoderTimeline.reverse();
+
+            setNewRender(newRender + 1);
+        },
+        [],
+    );
+    
+    
+    // const handleCloseClick = () => {        
+    //     //console.log(methoderTimeline);
+    //     methoderTimeline.reverse();
+    //     setNewRender(newRender + 1);
+    // } 
+
 
     const methoders = [
         {
@@ -56,8 +79,7 @@ const Section2 = ({ sectionID }) => {
     }, [portrait])
 
     
-    const styleOverride = { backgroundColor: scssVariables.scssDark }
-
+    const styleOverride = { backgroundColor: scssVariables.scssDark }   
     
 
     return (
@@ -69,7 +91,12 @@ const Section2 = ({ sectionID }) => {
 
                 <article className = 'gridder'>
                     { methoders.map(item => <div ref = { item.id === 0 ? gridderFieldRef : null } key = { item.id } className='gridderField'> <Methoder text = { item.text } squareSize = { methoderSize } /></div> ) }
-                </article>                    
+                </article>
+
+                <article className = 'gridderOverlay'>
+                    <button onClick = { handleCloseClick }></button>
+                </article>
+
 
             </div>  
         </div>
