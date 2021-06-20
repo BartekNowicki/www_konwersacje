@@ -37,6 +37,13 @@
         right: 5vw;
         @include closeBtn;
     }
+    & .methoderDescription {
+        border: 1px solid red;
+        position: absolute;        
+        bottom: 0;
+        right: 0;
+        width: 100%;            
+    }
 }
 
 .gridderField {
@@ -153,4 +160,9 @@
         right: 0;        
         transform: translate(50%, 50%) scale(1) rotate(45deg);
     }
+}
+
+.hidden {
+    visibility: hidden;
+    //visibility: visible;
 }

@@ -1,8 +1,10 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import { Text } from "./Text"
-import data from "../components/data"
-import { Methoder, methoderTimeline } from "../components/Methoder"
+import data from '../components/data'
+import { Methoder, methoderTimeline } from '../components/Methoder'
+import  MethoderDescription from '../components/MethoderDescription'
+
 import './section2.scss';
 import * as scssVariables from './scssVariablesForJs.module.scss'
 
@@ -79,7 +81,8 @@ const Section2 = ({ sectionID }) => {
     }, [portrait])
 
     
-    const styleOverride = { backgroundColor: scssVariables.scssDark }   
+    const styleOverride = { backgroundColor: scssVariables.scssDark }
+    const descriptionStyles = {  height: `calc(100% - ${methoderSize}px)` }
     
 
     return (
@@ -95,6 +98,16 @@ const Section2 = ({ sectionID }) => {
 
                 <article className = 'gridderOverlay'>
                     <button onClick = { handleCloseClick }></button>
+                    <div className='methoderDescription' style = { descriptionStyles }>
+
+                        { methoders.map(item => 
+                        <div key = { item.id } >
+                            <MethoderDescription text = { item.text }/>
+                        </div> ) }
+                        
+                        
+                    </div>
+
                 </article>
 
 

@@ -4,6 +4,15 @@ import { gsap } from "gsap"
 
 let methoderTimeline = null;
 
+const movedMethoderStyles = {
+    position: 'fixed',
+    top: '0', 
+    left: '0',    
+    zIndex: 2,
+    cursor: 'default',
+    transform: 'scale(0.5)'
+}
+
 
 const Methoder = ({ text, squareSize }) => {
         
@@ -16,7 +25,9 @@ const Methoder = ({ text, squareSize }) => {
                 return console.log('already moved!');
 
                 const tl = gsap.timeline();
-                methoderTimeline = tl;           
+                methoderTimeline = tl;
+                
+                const getMatchingDescriptionElement = (node) => document.querySelector(`.methoderDescription${node.classList[1]}`)
 
                 tl.to('.decorator', {
                         visibility: 'hidden',                    
@@ -32,11 +43,7 @@ const Methoder = ({ text, squareSize }) => {
                             console.log('myOuterTween complete');                       
                         }
                 }).to(e.target, {
-                        position: 'fixed',
-                        top: '5vw', 
-                        left: '5vw',
-                        zIndex: 2,
-                        cursor: 'default',
+                        ...movedMethoderStyles,                        
                         duration: 0.3,                    
                         onComplete: () => {
                             console.log('myInnerTween complete');
@@ -49,9 +56,15 @@ const Methoder = ({ text, squareSize }) => {
                             e.target.removeAttribute('status');
                             //console.log(e.target, 'status after reverse', e.target.getAttribute('status'));
                         }                   
+                })
+                .to(getMatchingDescriptionElement(e.target), {
+                        visibility: 'visible',
+                        duration: 0.1,                        
                 });
 
                 //console.log('creating new timeline, playing');
+
+                //methoderDescription
                
                 tl.play();            
             
