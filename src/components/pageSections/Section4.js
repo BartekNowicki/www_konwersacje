@@ -1,22 +1,19 @@
 import React from 'react'
-import { Text } from "./Text"
+import { Text } from '../Text'
 
-const Section7 = ({ sectionID }) => {
+const Section4 = ({ sectionID }) => {
 
     return (
-
         <div id = { sectionID } className = "pageSection">
 
             <div className = "mainTextWrapper">
-
-                <Text tag = 'p' text = 'często zadawane pytania' name = 'faq' classN = 'pageSectionTitle'/>
-
+                <Text tag = 'p' text = 'cennik' name = 'cennik' classN = 'pageSectionTitle'/>
             </div>
             
         </div>
     )
 }
 
-export default Section7
+export default Section4
 
         

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from '../components/Text'
-import * as scssVariables from './scssVariablesForJs.module.scss'
+import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 
 const Texter = ({ texterStyles, textTop, textBottom }) => {

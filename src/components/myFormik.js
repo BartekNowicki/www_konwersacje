@@ -1,11 +1,11 @@
  import React from 'react';
  import { Text } from "./Text"
- import data from "../components/data"
+ import data from '../data'
  import { Formik, Form, Field, ErrorMessage } from 'formik';
  import { useStore, useSelector } from 'react-redux'
  import { actionChangeEmail, actionChangeMessage, actionChangeFormSent } from '../state/actions'
  import sendEmail from '../utils/sendEmail'
- import * as scssVariables from './scssVariablesForJs.module.scss'
+ import * as scssVariables from '../scssVariablesForJs.module.scss'
  
 
  const BasicFormik = () => {

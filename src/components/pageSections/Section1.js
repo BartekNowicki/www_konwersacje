@@ -1,6 +1,6 @@
 import React from 'react'
-import { Campsite } from "../components/Campsite"
-import './Section1.scss';
+import { Campsite } from "../Campsite"
+import './section1.scss';
 
 
 

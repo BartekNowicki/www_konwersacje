@@ -4,8 +4,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
-@import '_variables';
-@import '_mixins';
+@import '../../_variables';
+@import '../../_mixins';
 
 .campsiteWrapper {
     // border: 5px solid rgb(241, 228, 33);    
@@ -163,8 +163,8 @@
     height: 40vw;
     max-width: 250px;
     max-height: 115px;
-    //border: 1px solid red;
-    background-image: url('../images/BartoszNowicki.png');
+    //border: 1px solid red;    
+    background-image: url('../../images/BartoszNowicki.png');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;

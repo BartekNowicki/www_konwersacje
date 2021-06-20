@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState, useCallback } from 'react'
 import { useSelector } from 'react-redux'
-import { Text } from "./Text"
-import data from '../components/data'
-import { Methoder, methoderTimeline } from '../components/Methoder'
-import  MethoderDescription from '../components/MethoderDescription'
+import { Text } from '../Text'
+import data from '../../data'
+import { Methoder, methoderTimeline } from '../Methoder'
+import  MethoderDescription from '../MethoderDescription'
 
 import './section2.scss';
-import * as scssVariables from './scssVariablesForJs.module.scss'
+import * as scssVariables from '../../scssVariablesForJs.module.scss'
 
 
 

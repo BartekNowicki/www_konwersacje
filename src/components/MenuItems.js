@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import MenuItem from "./MenuItem"
 import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen } from '../state/actions'
-import data from "../components/data"
+import data from "../data"
 
 
 const MenuItems = ({ open }) => {

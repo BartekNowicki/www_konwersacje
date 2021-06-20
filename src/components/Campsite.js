@@ -6,8 +6,9 @@ import { Text } from "../components/Text"
 import Texter from "../components/Texter"
 import Face from "../components/Face"
 import  MenuItems from "./MenuItems"
-import data from "../components/data"
-import * as scssVariables from './scssVariablesForJs.module.scss'
+// import data from "../data"
+import data from "../data"
+import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {

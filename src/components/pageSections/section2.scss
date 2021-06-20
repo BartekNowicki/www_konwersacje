@@ -1,5 +1,5 @@
-@import '_variables';
-@import '_mixins';
+@import '../../_variables';
+@import '../../_mixins';
 
 .gridder {
     //border: 1px solid green;
@@ -81,33 +81,33 @@
     }
     &.Th {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../images/lexis.svg');
+        background-image: url('../../images/lexis.svg');
         @include methoderBckg;
     }
     &.No {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../images/noentry.svg');
+        background-image: url('../../images/noentry.svg');
         @include methoderBckg;
     }
     &.Gr {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../images/growth.svg');
+        background-image: url('../../images/growth.svg');
         @include methoderBckg;
         
     }
     &.di {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../images/discussion.svg');
+        background-image: url('../../images//discussion.svg');
         @include methoderBckg;
     }
     &.IT {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../images/computer.svg');
+        background-image: url('../../images/computer.svg');
         @include methoderBckg;
     }
     &.ma {
         border: 1px solid rgba(0, 0, 0, 0.2);
-        background-image: url('../images/people.svg');
+        background-image: url('../../images/people.svg');
         @include methoderBckg;
     }
     
@@ -131,7 +131,7 @@
 
 .decorator {
     position: absolute;
-    background-image: url('../images/arrow.svg');
+    background-image: url('../../images/arrow.svg');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;    

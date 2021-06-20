@@ -1,8 +1,8 @@
 import React from 'react'
-import { Text } from "./Text"
-import data from "../components/data"
-import MyFormik from "./myFormik"
-import * as scssVariables from './scssVariablesForJs.module.scss'
+import { Text } from '../Text'
+import data from '../../data'
+import MyFormik from '../myFormik'
+import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import './section6.scss';
 
 const Section6 = ({ sectionID }) => {

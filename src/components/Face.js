@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text } from "./Text"
-import * as scssVariables from './scssVariablesForJs.module.scss'
+import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 const styles = {
         color: 'rgba(255,255,255, 0.7)',

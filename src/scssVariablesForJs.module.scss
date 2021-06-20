@@ -1,4 +1,11 @@
+
 @import '_variables';
+
+$breakpoints: (
+  small : 640px,
+  medium: 800px,
+  large : 1200px,  
+);
 
 :export {
   scssPrimaryFont: $primary-font;

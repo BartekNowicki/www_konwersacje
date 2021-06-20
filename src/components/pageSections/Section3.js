@@ -1,6 +1,6 @@
 import React from 'react'
-import { Text } from "./Text"
-import data from "../components/data"
+import { Text } from '../Text'
+import data from '../../data'
 
 const Section3 = ({ sectionID }) => {
    
