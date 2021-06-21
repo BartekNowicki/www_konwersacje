@@ -2,12 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 // import './campsite.scss';
-import { Text } from "../components/Text"
+import { Text } from '../components/Text'
 import Texter from "../components/Texter"
 import Face from "../components/Face"
 import  MenuItems from "./MenuItems"
 // import data from "../data"
-import data from "../data"
+import data from '../data'
 import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 
@@ -35,7 +35,7 @@ const scaleAndgetCampsiteSvgHeight = (portrait) => {
 
 export const Campsite = () => {
 
-    console.log('CAMPSITE RENDERED');
+    //console.log('CAMPSITE RENDERED');
 
     const portrait = useSelector((state) => state.isPortrait);
     const isMenuOpen = useSelector((state) => state.isMenuOpen);

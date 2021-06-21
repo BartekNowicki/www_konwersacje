@@ -12,7 +12,7 @@ import * as scssVariables from '../../scssVariablesForJs.module.scss'
 
 const Section2 = ({ sectionID }) => {
     
-    console.log('SECTION2 RENDERED');
+    //console.log('SECTION2 RENDERED');
 
     const [methoderSize, setMethoderSize] = useState(0);
 

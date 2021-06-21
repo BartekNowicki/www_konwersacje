@@ -26,20 +26,22 @@ html {
     font-family: $primary-font;
     text-transform: uppercase;
     color: black;
-    font-size: 5vw;
-    margin: 4vw 2vw;
+    font-size: 5vw;    
+    margin: 2vw 2vw;
     font-weight: bold;
     align-self: center;
     
-    &[name='section1Title'], &[name='section6Title'] {
+    &[name='section1Title'], 
+    &[name='section6Title'],
+    &[name='section3Title'] {
         color: #FEC303;
         z-index: 1;        
     }
-    @media (min-width: 800px) {
-      font-size: 4vw;      
+    @media (min-width: map-get($breakpoints, medium)) {
+      font-size: 3vw;      
     }
     @media (orientation: landscape) {
-      font-size: 4vw;     
+      font-size: 3vw;     
     }
 }
 

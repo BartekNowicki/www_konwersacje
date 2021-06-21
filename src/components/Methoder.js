@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react'
-import { Text } from "./Text"
-import { gsap } from "gsap"
+import { Text } from './Text'
+import { gsap } from 'gsap'
 
 let methoderTimeline = null;
 
@@ -30,7 +30,7 @@ const Methoder = ({ text, squareSize }) => {
                 const getMatchingDescriptionElement = (node) => document.querySelector(`.methoderDescription${node.classList[1]}`)
 
                 tl.to('.decorator', {
-                        visibility: 'hidden',                    
+                        visibility: 'hidden',                 
                         duration: 0.1,                    
                         onComplete: () => {
                             console.log('decorators hidden');             
