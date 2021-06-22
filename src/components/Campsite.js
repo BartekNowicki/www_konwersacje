@@ -91,7 +91,12 @@ export const Campsite = () => {
 
     }, [portrait]);
 
-    const styleOverride = { backgroundColor: scssVariables.scssBlack }
+    const mainTextWrapper = { 
+        backgroundColor: scssVariables.scssBlack,
+        letterSpacing: '1px',        
+        fontFamily: '$secondary-font',
+        fontSize: '12px',        
+    }
         
     const texters = [
         {
@@ -169,7 +174,7 @@ export const Campsite = () => {
 
         </div>
 
-        {portrait && <div className = "mainTextWrapper" style = { styleOverride }>
+        {portrait && <div className = "mainTextWrapper" style = { mainTextWrapper }>
 
             <Text tag = 'p' classN = "pageSectionTitle" text = { data.textSection1_5 } name = 'section1Title'/>
 

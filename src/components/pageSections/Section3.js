@@ -32,10 +32,6 @@ const Section3 = ({ sectionID }) => {
                 <div style = { sliderWrapperStyles }>
                     <Slider />
                 </div>
-                
-            
-
-                
 
             </div>
             

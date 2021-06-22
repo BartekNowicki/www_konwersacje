@@ -82,13 +82,16 @@ const Section2 = ({ sectionID }) => {
 
     
     const styleOverride = { backgroundColor: scssVariables.scssDark }
-    const descriptionStyles = {  height: `calc(100% - ${methoderSize}px)` }
+    const descriptionStyles = {
+        height: `calc(100% - ${methoderSize / 1.5}px)`,
+        //border: '1px solid red', 
+    }
     
 
     return (
-        <div id = { sectionID } className = "pageSection">
+        <div id = { sectionID } className = 'pageSection'>
 
-            <div className = "mainTextWrapper" style = { styleOverride }>
+            <div className = 'mainTextWrapper' style = { styleOverride }>
 
                 <Text tag = 'p' text = { data.textSection2_1 } name = 'metoda' classN = 'pageSectionTitle'/>
 

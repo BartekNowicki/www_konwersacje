@@ -30,12 +30,13 @@ const Methoder = ({ text, squareSize }) => {
                 const getMatchingDescriptionElement = (node) => document.querySelector(`.methoderDescription${node.classList[1]}`)
 
                 tl.to('.decorator', {
-                        visibility: 'hidden',                 
+                        visibility: 'hidden',   
                         duration: 0.1,                    
                         onComplete: () => {
                             console.log('decorators hidden');             
                         }
                 }).to('.gridderOverlay', {
+                        visibility: 'visible',
                         width: '100vw',
                         height: '100vh', 
                         duration: 0.3,                    
@@ -58,7 +59,8 @@ const Methoder = ({ text, squareSize }) => {
                         }                   
                 })
                 .to(getMatchingDescriptionElement(e.target), {
-                        visibility: 'visible',
+                        // visibility: 'visible',
+                        className: "-='hidden'",
                         duration: 0.1,                        
                 });
 
@@ -78,7 +80,7 @@ const Methoder = ({ text, squareSize }) => {
     return (
         <div className = {`methoder ${text[0]}${text[1]}`} style = {{ height: squareSize + 'px', width: squareSize}} onClick = { handleMethoderClick }>
 
-            <Text tag = 'p' text = { text } name = ''/>
+            <Text tag = 'p' text = { text }/>
             <div className='decorator'></div>
             <div className='decorator'></div>
             <div className='decorator'></div>

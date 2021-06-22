@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text } from './Text'
 
-const Abouter = ({ text }) => {
+const Abouter = ({ text, logoUrl, bakcgUrl, title, location, dates, status }) => {
 
     const screenStyles = {
         color: 'white',
@@ -17,6 +17,17 @@ const Abouter = ({ text }) => {
     return (
         <div style = { screenStyles }>
             <Text tag = 'p' text = { text } />
+            <div style = {{fontSize: '10px'}}>
+
+                {logoUrl}
+                {bakcgUrl}
+                {title}
+                {location}
+                {dates}
+                {status}
+                
+            </div>
+
         </div>
     )
 }

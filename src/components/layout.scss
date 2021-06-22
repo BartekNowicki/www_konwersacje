@@ -34,7 +34,7 @@ html {
     &[name='section1Title'], 
     &[name='section6Title'],
     &[name='section3Title'] {
-        color: #FEC303;
+        color: $darkYellow;
         z-index: 1;        
     }
     @media (min-width: map-get($breakpoints, medium)) {
@@ -53,11 +53,11 @@ html {
     flex-grow: 1;
     justify-content: flex-start;
     padding: 3vw;
-    & p + p {
-        //color: red;
-        letter-spacing: normal;
-        @include paragraphStyle;        
-    }    
+    // & p + p {
+    //     //color: red;
+    //     letter-spacing: normal;
+    //     @include paragraphStyle;        
+    // }    
     @media (min-width: map-get($breakpoints, medium)) {
       padding: 4vw;
     }  

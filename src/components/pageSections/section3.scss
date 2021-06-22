@@ -1,0 +1,19 @@
+@import '../../_variables';
+
+
+.disabledArrow {    
+    position: relative;
+    cursor: normal;
+    //border: 1px solid red;
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black;
+        opacity: 0.8;
+        //border: 1px solid rebeccapurple;
+    }
+}

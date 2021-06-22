@@ -10,63 +10,52 @@ import Content6 from '../components/methoderDescriptionContent/Content6'
 
 
 const MethoderDescription = ({ text }) => {
+    
+    let number;
+    let line;
+
+    if (text === data.textSection2_1a) {
+        number = 1;
+        line = data.textSection2_1b;
+    } else if (text === data.textSection2_2a) {
+        number = 2;
+        line = data.textSection2_2b;
+    } else if (text === data.textSection2_3a) {
+        number = 3;
+        line = data.textSection2_3b;
+    } else if (text === data.textSection2_4a) {
+        number = 4;
+        line = data.textSection2_4b;
+    } else if (text === data.textSection2_5a) {
+        number = 5;
+        line = data.textSection2_5b;
+    } else if (text === data.textSection2_6a) {
+        number = 6;
+        line = data.textSection2_6b;
+    } 
+        
+    const getContentNode = (x) => {
+        if (x === 1) return <Content1 />
+        if (x === 2) return <Content2 />
+        if (x === 3) return <Content3 />
+        if (x === 4) return <Content4 />
+        if (x === 5) return <Content5 />
+        if (x === 6) return <Content6 />
+    }
+        
+    // const markerClass = `methoderDescription${text[0]}${text[1]} hidden`;
 
     const markerClass = `methoderDescription${text[0]}${text[1]} hidden`;
     
-    if (text === data.textSection2_1a) return (
+    return (
         <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_1b } />
-                <Content1 />
+            <div className = { markerClass } >
+                <Text tag = 'p' text = { line } classN = 'methoderDescriptionHeader'/>
+                { getContentNode(number) }
             </div>        
         </>
     )
-
-    if (text === data.textSection2_2a) return (
-        <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_2b } />
-                <Content2 />
-            </div>        
-        </>
-    )
-
-    if (text === data.textSection2_3a) return (
-        <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_3b } />
-                <Content3 />
-            </div>        
-        </>
-    )
-
-    if (text === data.textSection2_4a) return (
-        <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_4b } />
-                <Content4 />
-            </div>        
-        </>
-    )
-
-    if (text === data.textSection2_5a) return (
-        <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_5b } />
-                <Content5 />
-            </div>        
-        </>
-    )
-
-    if (text === data.textSection2_6a) return (
-        <>
-            <div className = { markerClass }>
-                <Text tag = 'p' text = { data.textSection2_6b } />
-                <Content6 />
-            </div>        
-        </>
-    )
-
+    
     }
 
 export default MethoderDescription
