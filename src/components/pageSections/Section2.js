@@ -24,8 +24,12 @@ const Section2 = ({ sectionID }) => {
         () => {
             //console.log(methoderTimeline);
             methoderTimeline.reverse();
-
             setNewRender(newRender + 1);
+            //enable back scrolling blocked by opened methoder
+            //and scroll again to the right section
+            document.body.style.position = 'unset';
+            document.getElementById('metodaID').scrollIntoView();
+            
         },
         [],
     );

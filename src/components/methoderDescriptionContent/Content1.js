@@ -10,7 +10,7 @@ const Content1 = () => {
         height: '30vw',
         maxWidth: '300px',
         maxHeight: '450px',
-        border: '1px solid green',
+        //border: '1px solid green',
         backgroundImage: `url(${ lexical })`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'contain',

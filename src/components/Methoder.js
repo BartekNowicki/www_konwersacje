@@ -21,8 +21,11 @@ const Methoder = ({ text, squareSize }) => {
     const handleMethoderClick = useCallback(
         (e) => {
             
-            if (e.target.getAttribute('status') === 'moved') 
-                return console.log('already moved!');
+            if (e.target.getAttribute('status') === 'moved') return
+                // return console.log('already moved!');
+
+                //disable scrolling under the methoder
+                document.body.style.position = 'fixed';               
 
                 const tl = gsap.timeline();
                 methoderTimeline = tl;

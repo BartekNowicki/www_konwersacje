@@ -2,7 +2,9 @@
 @import '../_variables';
 @import '../mixins';
 
-
+body {
+    position: unset;
+}
 
 html {
     user-select: none;
