@@ -2,119 +2,116 @@ import React, { useEffect, useRef } from 'react'
 import Abouter from './Abouter';
 import arrow from '../images/arrow.svg'
 import { gsap } from 'gsap'
+import primarySchoolLogo from '../images/primarySchoolLogo.svg'
+import highschoolLogo from '../images/highschoolLogo.jpg'
+import westValleyCollegeLogo from '../images/westValleyCollegeLogo.jpg'
+import deAnzaCollegeLogo from '../images/deAnzaCollegeLogo.jpg'
+import uniwersytetWarszawskiLogo from '../images/uniwersytetWarszawskiLogo.jpg'
+import bardoLogo from '../images/bardoLogo.jpg'
+
 
 
 const abouters = [
     {
         id: 0,
         name: 'abouter1',
-        text: '1',
-        logoUrl: 1,
-        bakcgUrl : 1, 
-        title : 1, 
-        location : 1, 
-        dates : 1, 
-        status : 1, 
+        text: 'Polish primary school',
+        logoUrl: primarySchoolLogo,        
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '1983 - 1989', 
+        status : 'completed grades 1 - 6', 
     },
     {
         id: 1,
         name: 'abouter2',
-        text: '2',
-        logoUrl: 2,
-        bakcgUrl : 2, 
-        title : 2, 
-        location : 2, 
-        dates : 2, 
-        status :2,
+        text: 'Prospect High School',
+        logoUrl: highschoolLogo,
+        country : 'usa', 
+        location : 'Saratoga, CA, USA', 
+        dates : '1990 - 1994', 
+        status :'graduated',
     },
     {
         id: 2,
         name: 'abouter3',
-        text: '3',
-        logoUrl: 3,
-        bakcgUrl : 3, 
-        title : 3, 
-        location : 3, 
-        dates : 3, 
-        status : 3,
+        text: 'West Valley College',
+        logoUrl: westValleyCollegeLogo,
+        country : 'usa', 
+        location : 'Saratoga, CA, USA', 
+        dates : '1993', 
+        status :'completed a philosophy class',
     },
     {
         id: 3,
         name: 'abouter4',
-        text: '4',
-        logoUrl: 4,
-        bakcgUrl : 4, 
-        title : 4, 
-        location : 4, 
-        dates : 4, 
-        status : 4,
+        text: 'De Anza College',
+        logoUrl: deAnzaCollegeLogo,
+        country : 'usa', 
+        location : 'Cupertino, CA, USA', 
+        dates : '1993 - 1994', 
+        status : 'completed a two-semester physics course',
     },
     {
         id: 4,
         name: 'abouter5',
-        text: '5',
-        logoUrl: 5,
-        bakcgUrl : 5, 
-        title : 5, 
-        location : 5, 
-        dates : 5, 
-        status :5,
+        text: 'Uniwersytet Warszawski',
+        logoUrl: uniwersytetWarszawskiLogo,        
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '1995 - 1996', 
+        status :'completed two semesters at the Physics Department',
     },
     {
         id: 5,
         name: 'abouter6',
-        text: '6',
-        logoUrl: 6,
-        bakcgUrl : 6, 
-        title : 6, 
-        location : 6, 
-        dates : 6, 
-        status : 6,
+        text: 'Uniwersytet Warszawski',
+        logoUrl: uniwersytetWarszawskiLogo,
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '1996 - 2001', 
+        status :'MA in psychology',
     },
     {
         id: 6,
         name: 'abouter7',
-        text: '7',
-        logoUrl: 7,
-        bakcgUrl : 7, 
-        title : 7, 
-        location : 7, 
-        dates : 7, 
-        status : 7,
+        text: 'Centrum Konwersacji School For Conversational Language Development',
+        logoUrl: bardoLogo,
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '2001 - 2011', 
+        status : 'owner, CEO and English as a Second Language teacher',
     },
     {
         id: 7,
         name: 'abouter8',
-        text: '8',
-        logoUrl: 8,
-        bakcgUrl : 8, 
-        title : 8, 
-        location : 8, 
-        dates : 8, 
-        status : 8,
+        text: 'Bardo Biuro Tłumaczeń Konferencyjnych',
+        logoUrl: bardoLogo,
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '2011 - present', 
+        status : 'owner, CEO and Polish-English interpreter',
     },
     {
         id: 8,
         name: 'abouter9',
-        text: '9',
-        logoUrl: 9,
-        bakcgUrl : 9, 
-        title : 9, 
-        location : 9, 
-        dates : 9, 
-        status : 9,
+        text: 'Bardo School For Conversational Language Development',
+        logoUrl: bardoLogo,
+        country : 'pl', 
+        location : 'Warsaw, Poland', 
+        dates : '2021 - present', 
+        status : 'owner, CEO and English as a Second Language teacher',
     },
-    {
-        id: 9,
-        name: 'abouter10',
-        text: '10',
-        logoUrl: 10,
-        bakcgUrl : 10, 
-        title : 10, 
-        location : 10, 
-        dates : 10, 
-        status : 10,
-    }    
+    // {
+    //     id: 9,
+    //     name: 'abouter10',
+    //     text: 'interests and hobbies',
+    //     logoUrl: '10',
+    //     country : 'pl', 
+    //     location : 'Warsaw, Poland', 
+    //     dates : '10', 
+    //     status : '10',
+    // }    
 ];
 
 
@@ -130,9 +127,9 @@ const sliderStyles = {
 
 
 const abouterWrapperStyles = {
-    border: '2px solid red',
-    width: '90%', 
-    height: '90%',
+    //border: '2px solid red',
+    width: '95%', 
+    height: '95%',
     position: 'absolute',
     top: '50%',
     left: '50%',
@@ -280,9 +277,8 @@ const Slider = () => {
                 
                     <Abouter 
                     text = { item.text } 
-                    logoUrl = { item.logoUrl } 
-                    bakcgUrl = { item.bakcgUrl } 
-                    title = { item.title } 
+                    logoUrl = { item.logoUrl }                    
+                    country = { item.country } 
                     location = { item.location } 
                     dates = { item.dates } 
                     status = { item.status } 

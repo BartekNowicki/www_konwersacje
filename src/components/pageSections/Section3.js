@@ -1,6 +1,5 @@
 import React from 'react'
 import { Text } from '../Text'
-import data from '../../data'
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import Slider from '../Slider';
 import './section3.scss';
@@ -19,7 +18,7 @@ const Section3 = ({ sectionID }) => {
     }
 
     const sliderWrapperStyles = {
-        border: '2px solid blue',
+        //border: '2px solid blue',
         flexGrow: 1,
         width: '100%',        
     }
