@@ -31,6 +31,7 @@ const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
         border: '1px solid rgba(0, 0, 0, 0.8)',
         borderRadius: '50%',
         backgroundColor: 'rgba(0, 0, 0, 0.4)',
+        position: 'relative' //for the flag
     }
 
     const flagStyles = {        
@@ -38,15 +39,15 @@ const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
         height: '10vmin',
         backgroundImage: `url(${country === 'pl' ? flagPL : flagUS})`,
         backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'top right',
+        
         backgroundSize: 'contain',        
         borderBottomLeftRadius: '5px',
         position: 'absolute',
-        top: '1vmin',
-        right: '1vmin',
-        
-        
-
+        top: '-10%',
+        transformOrigin: 'bottom left',
+        transform: `translateY(-50%) rotate(${country === 'pl' ? '0deg' : '25deg'})`,
+        //border: '1px solid red',        
+        right: '-60%',
     }
 
     
@@ -55,9 +56,13 @@ const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
 
         <div style = { screenStyles }>
 
-            <div style = { logoStyles }></div>
+            <div style = { logoStyles }>
+                
+                <div style = { flagStyles }></div>
 
-            <div style = { flagStyles }></div>
+            </div>
+
+            
             
             <Text tag = 'p' text = { text } styles = {{ textAlign: 'center', marginTop: '10px' }}/>
             
