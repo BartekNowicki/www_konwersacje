@@ -66,6 +66,7 @@ const data = {
     
     textSection5_1: 'lokalizacja',
     textSection5_2: 'Spotykamy się w sali w rejonie Gocławia w Warszawie, dokładna lokalizacja będzie podana przed rozpoczęciem zajęć.',
+    textSection5_3: 'W wyjątkowych sytuacjach istnieje możliwość wdzwonienia się na zajęcia poprzez mój laptop i komunikator.',
 
     textSection6_1: 'zapisy i kontakt',
     textSection6_2: 'Jeżeli chcesz się zapisać lub porozmawiać o zajęciach, napisz do mnie po angielsku poprzez poniższy formularz lub bezpośrednio na',

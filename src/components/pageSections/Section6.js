@@ -11,8 +11,7 @@ const Section6 = ({ sectionID }) => {
          backgroundColor: scssVariables.scssBlack,
          display: 'flex',
          flexDirection: 'column',
-         justifyContent: 'start',
-         
+         justifyContent: 'start',         
     }
     
 

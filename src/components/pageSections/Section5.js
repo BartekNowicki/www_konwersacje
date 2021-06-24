@@ -2,11 +2,12 @@ import React from 'react'
 import { Text } from '../Text'
 import data from '../../data'
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
+import  Map from '../Map'
 
 const Section5 = ({ sectionID }) => {
 
     const styleOverride = {
-         border: '2px solid blue',
+         //border: '2px solid blue',
          backgroundColor: scssVariables.scssBlack,
          display: 'flex',
          flexDirection: 'column',
@@ -22,8 +23,8 @@ const Section5 = ({ sectionID }) => {
           color: scssVariables.scssSmoke,        
     }
 
-    const styleMap = {
-         border: '2px solid red',
+    const styleMapWrapper = {
+         //border: '2px solid red',
          display: 'flex',
          flexDirection: 'column',
          flexGrow: '1',
@@ -40,9 +41,12 @@ const Section5 = ({ sectionID }) => {
 
                 <div style = { styleIntro }>
                     <Text tag = 'p' text = { data.textSection5_2 } />
+                    <Text tag = 'p' text = { data.textSection5_3 } />
                 </div>
 
-                <div style = { styleMap }></div>
+                <div style = { styleMapWrapper }>
+                    <Map />
+                </div>
                 
             </div>
             
