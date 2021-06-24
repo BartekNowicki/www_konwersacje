@@ -38,8 +38,7 @@ const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
         width: '20vmin', 
         height: '10vmin',
         backgroundImage: `url(${country === 'pl' ? flagPL : flagUS})`,
-        backgroundRepeat: 'no-repeat',
-        
+        backgroundRepeat: 'no-repeat',        
         backgroundSize: 'contain',        
         borderBottomLeftRadius: '5px',
         position: 'absolute',

@@ -35,7 +35,9 @@ html {
     
     &[name='section1Title'], 
     &[name='section6Title'],
-    &[name='section3Title'] {
+    &[name='section3Title'],
+    &[name='section5Title']    
+    {
         color: $darkYellow;
         z-index: 1;        
     }

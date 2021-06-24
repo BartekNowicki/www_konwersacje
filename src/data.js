@@ -62,7 +62,11 @@ const data = {
     textSection2_6a: 'max 5',
     textSection2_6b: 'five students per group, tops!',
     textSection2_6c: 'Chcąc móc poświęcic każdemu tyle samo czasu i uwagi postanowiłem ograniczyć grupy do maksymalnie pięciu osób',
-    textSection2_6d: 'Oznacza to w praktyce to, że statystycznie rzecz ujmując większość czasu będziesz rozmawiał w towarzystwie dwóch lub trzech innych uczniów, co pozwoli na ciekawą rozmowę, wymianę poglądów i spokojne przyjrzenie się popełnianym błędom',    
+    textSection2_6d: 'Oznacza to w praktyce to, że statystycznie rzecz ujmując większość czasu będziesz rozmawiał w towarzystwie dwóch lub trzech innych uczniów, co pozwoli na ciekawą rozmowę, wymianę poglądów i spokojne przyjrzenie się popełnianym błędom',
+    
+    textSection5_1: 'lokalizacja',
+    textSection5_2: 'Spotykamy się w sali w rejonie Gocławia w Warszawie, dokładna lokalizacja będzie podana przed rozpoczęciem zajęć.',
+
     textSection6_1: 'zapisy i kontakt',
     textSection6_2: 'Jeżeli chcesz się zapisać lub porozmawiać o zajęciach, napisz do mnie po angielsku poprzez poniższy formularz lub bezpośrednio na',
     textSection6_3: 'angielskikonwersacjeeu@gmail.com',
