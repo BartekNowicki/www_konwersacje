@@ -9,7 +9,7 @@ import * as scssVariables from '../scssVariablesForJs.module.scss'
 const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
 
     const screenStyles = {
-        color: 'rgba(255, 255, 255, 0.6)',
+        color: scssVariables.scssSmoke,
         fontFamily: scssVariables.scssSecondaryFont,
         fontSize: '4vmin',
         display: 'flex',

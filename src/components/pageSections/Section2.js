@@ -4,7 +4,6 @@ import { Text } from '../Text'
 import data from '../../data'
 import { Methoder, methoderTimeline } from '../Methoder'
 import  MethoderDescription from '../MethoderDescription'
-
 import './section2.scss';
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
 

@@ -63,6 +63,17 @@ const data = {
     textSection2_6b: 'five students per group, tops!',
     textSection2_6c: 'Chcąc móc poświęcic każdemu tyle samo czasu i uwagi postanowiłem ograniczyć grupy do maksymalnie pięciu osób',
     textSection2_6d: 'Oznacza to w praktyce to, że statystycznie rzecz ujmując większość czasu będziesz rozmawiał w towarzystwie dwóch lub trzech innych uczniów, co pozwoli na ciekawą rozmowę, wymianę poglądów i spokojne przyjrzenie się popełnianym błędom',
+
+    textSection4_1: 'grupy i cennik zajęć',
+    textSection4_2: 'Nowe grupy ruszają wraz z początkiem semestru od września 2021r i będą kontynuowane do końca stycznia 2022r z możliwością przedłużenia na kolejny semestr.',
+    textSection4_3: 'W ramach kursu planowane jest 20 spotkań na semestr.',
+    textSection4_4_1a: 'kurs 1 tytuł',
+    textSection4_4_1b: 'kurs 1 opis',
+    textSection4_4_1c: 'kurs 1 dni i godziny',
+    textSection4_4_2a: 'kurs 2 tytuł',
+    textSection4_4_2b: 'kurs 2 opis',
+    textSection4_4_2c: 'kurs 2 dni i godziny',
+
     
     textSection5_1: 'lokalizacja',
     textSection5_2: 'Spotykamy się w sali w rejonie Gocławia w Warszawie, dokładna lokalizacja będzie podana przed rozpoczęciem zajęć.',
@@ -75,13 +86,14 @@ const data = {
     textSection6_5: 'Dziękuję za wysłanie formularza. Jeżeli nie otrzymasz odpowiedzi, będzie to oznaczało, że połknęły go chochliki internetowe - napisz wtedy proszę zwykłego maila...',
     text86b: 'gwarancja małej grupy max 5 osób lub zajęcia indywidualne',
     text9: 'o mnie',
-    text91: 'z wykształcenia jestem psychologiem, z zamiłowania lingwistą, z aspiracji  poliglotą, a zawadowo nauczycielem oraz tłumaczem konferencyjnym w kombinacji językowej polski-angielski',
+    text91: 'Z wykształcenia jestem psychologiem, z zamiłowania programistą oraz lingwistą, z aspiracji  poliglotą, a zawodowo nauczycielem oraz tłumaczem konferencyjnym w kombinacji językowej polski-angielski',
     text92: 'jezykiem angielskim posługuję się  na poziomie native speaker',
-    text93: 'Ukończyłem w Polsce 6 klas szkoły podstawowej, po czym wyemigrowałem do USA, gdzie kontynuowałem naukę w kalifornijskim liceum',
-    text94: 'Jeszcze przed ukończeniem szkoły średniej rozpocząłem studia na lokalnych collegach  na wydziałach filozofii oraz fizyki',
+    text93: 'Ukończyłem w Polsce sześć klas szkoły podstawowej, po czym wyemigrowałem do USA, gdzie rozpocząłem naukę w kalifornijskim liceum',
+    text94: 'Jeszcze przed ukończeniem szkoły średniej rozpocząłem studia na lokalnych collegach na wydziałach filozofii oraz fizyki',
     text95: 'W kolejnych latach podjąłem studia fizyki na Uniwersytecie Warszawskiem, a po roku przeniosłem się na wydział psychologii, która pochłonęła mnie bez reszty. Studia psychologii ukończyłem broniąc pracę magisterską na temat roli stereotypów w mechanizmach pamięci',
-    text96: 'Po studiach założyłem własną szkołę języka angielskiego pod nazwą Center For Conversational Language Development, w której uczyłem w trybie konwersacyjnym przy zastosowaniu The Lexical Approach',
+    text96: 'Po studiach założyłem własną szkołę języka angielskiego pod nazwą \'Center For Conversational Language Development\', w której uczyłem w trybie konwersacyjnym przy zastosowaniu podejścia \'The Lexical Approach\'',
     text97: 'Od roku 2011 pracuję także jako tłumacz konferencyjny przekładając na żywo z języka polskiego na angielski i odwrotnie.',
+    text98: 'Serdecznie zapraszam na zajęcia - come on down for a discussion - or just stay a while, and listen...',
     
 };
 
