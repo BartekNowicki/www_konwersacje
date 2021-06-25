@@ -20,10 +20,15 @@ const Methoder = ({ text, squareSize }) => {
 
     const handleMethoderClick = useCallback(
         (e) => {
-            
-            if (e.target.getAttribute('status') === 'moved') return
-                // return console.log('already moved!');
 
+            if (e.target.tagName === 'P') {
+                //if clicked on a child, propagate up
+                //console.log('manually propagating the event to my parent');
+                e.target = e.target.parentNode;
+            }
+            
+            if (!e.target || e.target.getAttribute('status') === 'moved') return
+                
                 //disable scrolling under the methoder
                 document.body.style.position = 'fixed';               
 
@@ -64,7 +69,8 @@ const Methoder = ({ text, squareSize }) => {
                 .to(getMatchingDescriptionElement(e.target), {
                         // visibility: 'visible',
                         className: "-='hidden'",
-                        duration: 0.1,                        
+                        duration: 0.1,
+                        delay: 0.75, //target not immediately identified                      
                 });
 
                 //console.log('creating new timeline, playing');

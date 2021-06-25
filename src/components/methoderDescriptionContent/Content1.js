@@ -22,11 +22,14 @@ const Content1 = () => {
 
     return (
         <div className = 'methoderDescriptionContent'>
+
             <div style = { bookStyles }></div>
+            
             <Text tag = 'p' text = { data.textSection2_1c } />
             <Text tag = 'p' text = { data.textSection2_1d } />
             <Text tag = 'p' text = { data.textSection2_1e } />
             <Text tag = 'p' text = { data.textSection2_1f } />
+            
         </div>
     )
 }
