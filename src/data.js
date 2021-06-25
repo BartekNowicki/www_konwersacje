@@ -66,7 +66,7 @@ const data = {
 
     textSection4_1: 'grupy i cennik zajęć',
     textSection4_2: 'Nowe grupy ruszają wraz z początkiem semestru od września 2021r i będą kontynuowane do końca stycznia 2022r z możliwością przedłużenia na kolejny semestr.',
-    textSection4_3: 'W ramach kursu planowane jest 20 spotkań na semestr.',
+    textSection4_3: 'Kurs trwa przez około 20 tygodni danego semetru tak, aby odbyło się 20 spotkań w grupie Regular i 40 spotkań w grupie Intense.',
     textSection4_4_1a: 'kurs 1 tytuł',
     textSection4_4_1b: 'kurs 1 opis',
     textSection4_4_1c: 'kurs 1 dni i godziny',

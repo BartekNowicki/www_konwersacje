@@ -10,32 +10,32 @@ import Courser from '../../components/Courser'
 const coursers = [
     {
         id: 0,
-        title: 'course1',
-        description: 'description1',
-        dates: 'dates1',
-        price: 'price1'
+        title: 'General English in Conversation Regular',
+        description: 'grupa konwersacyjna spotykająca się raz w tygodniu',
+        dates: ['grupa A wtorek g.9:00 - 10:00', 'grupa B wtorek g.19:00 - 20:00', 'grupa C środa g.9:00 - 10:00', 'grupa D środa g.19:00 - 20:00'],
+        price: '1390zł / 20 spotkań'
     },
     {
         id: 1,
-        title: 'course2',
-        description: 'description2',
-        dates: 'dates2',
-        price: 'price2'
+        title: 'General English in Conversation Intense',
+        description: 'grupa konwersacyjna spotykająca się dwa razy w tygodniu',
+        dates: ['grupa E poniedziałek i czwartek g.9:00 - 10:00', 'grupa F poniedziałek i czwartek g.19:00 - 20:00'],
+        price: '2790zł / 40 spotkań'
     },
     {
         id: 2,
-        title: 'course3',
-        description: 'description3',
-        dates: 'dates3',
-        price: 'price3'
+        title: 'General English in Conversation One-on-One',
+        description: 'spotkania indywidualne',
+        dates: ['terminy ustalane są na bieżąco'],
+        price: '110zł / 60min'
     },
-    {
-        id: 3,
-        title: 'course4',
-        description: 'description4',
-        dates: 'dates4',
-        price: 'price4'
-    },
+    // {
+    //     id: 3,
+    //     title: 'course4',
+    //     description: 'description4',
+    //     dates: ['dates4'],
+    //     price: 'price4'
+    // },
        
 ];
 
@@ -45,30 +45,31 @@ const Section4 = ({ sectionID }) => {
     const portrait = useSelector((state) => state.isPortrait);
 
     const styleOverride = {
-         //border: '2px solid blue',
-         //backgroundColor: scssVariables.scssOrangeDark,
-         backgroundColor: scssVariables.scssOrangeLight,
+         
+        //border: '2px solid pink',
+         backgroundColor: scssVariables.scssDark,
          fontFamily: scssVariables.scssSecondaryFont,
-         fontSize: '3vmin',       
-        //  display: 'flex',
-        //  flexDirection: 'column',
-        //  justifyContent: 'center',
-        //  alignItems: 'center',
+         fontSize: '3vmin',
+
     }
     
 
     const styleCourserWrapper = portrait 
     ? 
     {
-        border: '2px solid blue',
+        //border: '2px solid blue',
+        margin: '20px',
         overflowY: 'scroll',
-        height: '80vh',        
+        height: '80vh',
+        maxWidth: '800px',
     }
     :
     {
-        border: '2px solid blue',
+        //border: '2px solid blue',
+        margin: '20px auto',
         overflowY: 'scroll',
-        height: '60vh',        
+        height: '60vh',
+        maxWidth: '800px',       
     }
 
     return (
@@ -85,8 +86,7 @@ const Section4 = ({ sectionID }) => {
 
                     { coursers.map(item => <div key = { item.id}><Courser title = { item.title } description = { item.description } dates = { item.dates } price = { item.price } /> </div>) }
                     
-                </div>
-                
+                </div>                
 
             </div>
             
