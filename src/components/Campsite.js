@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
-// import './campsite.scss';
 import { Text } from '../components/Text'
 import Texter from "../components/Texter"
 import Face from "../components/Face"
 import  MenuItems from "./MenuItems"
-// import data from "../data"
 import data from '../data'
 import * as scssVariables from '../scssVariablesForJs.module.scss'
+import { gsap } from 'gsap'
 
 
 const scaleAndgetCampsiteSvgHeight = (portrait) => {
@@ -71,15 +70,53 @@ export const Campsite = () => {
         heroTextWrapperStyle = portrait
         ? { height: `${applyHeightPortrait}` }
         : { height: `${applyHeightLandscape}` }
-    }            
+    }
+    
+    
+    const initializeHeroAnimations = () => {
+
+        
+
+        // [name = "text_1"] 
+        // [name = "text_2"] 
+        // [name = "text_3"] 
+        // [name = "text_4"]
+    }
     
     
 
     useEffect(() => {
-        
+
         positionComponentContent();
 
-    },[]);
+        console.log('initializing animations');
+
+        const tl = gsap.timeline();
+        
+        tl.to('[name = "text_1"] ', {
+            opacity: 1,   
+            duration: 2,
+            delay: 2,                        
+        }).to('[name = "text_2"] ', {
+            opacity: 1,   
+            duration: 2,                                  
+        }).to('[name = "text_3"] ', {
+            opacity: 1,   
+            duration: 2,            
+        }).to('[name = "text_4"] ', {
+            opacity: 1,   
+            duration: 2,
+        });
+
+        return () => {
+
+            console.log('cleaning up the animation');
+
+            tl.kill();
+
+        }
+
+    }, [])
 
     useEffect(() => {        
         
@@ -95,7 +132,7 @@ export const Campsite = () => {
         backgroundColor: scssVariables.scssBlack,
         letterSpacing: '1px',        
         fontFamily: '$secondary-font',
-        fontSize: '12px',        
+        fontSize: '12px',     
     }
         
     const texters = [

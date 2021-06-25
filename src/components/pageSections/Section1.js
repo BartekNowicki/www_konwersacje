@@ -3,7 +3,6 @@ import { Campsite } from "../Campsite"
 import './section1.scss';
 
 
-
 const Section1 = ({ sectionID }) => {
 
     return (

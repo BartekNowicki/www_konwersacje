@@ -1,6 +1,6 @@
 
 // It does load the Google font. But there is a flash second when the default font is visible. Is there a way to prefetch the font so that the screen doesn't flicker? – Arunster Aug 13 '20 at 2:45
-// This is because of the display: swap. You can change the behavior but this is a way to avoid the render-block. The font is already downloaded but the CSS needs to be parsed either way and the display: swaploads don't block the CSS rendering and when the font is parsed, it swaps. Try display: block if you want to avoid the flicker. – Ferran Buireu Aug 13 '20 at 4:57
+// This is because of the display: swap. You can change the behavior but this is a way to avoid the render-block. The font is already downloaded but the CSS needs to be parsed either way and the display: swap loads don't block the CSS rendering and when the font is parsed, it swaps. Try display: block if you want to avoid the flicker. – Ferran Buireu Aug 13 '20 at 4:57
 
 @import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
@@ -28,64 +28,54 @@
 .heroTextWrapper {
     position: absolute;
     top: 0;
-    right: 0;
+    right: 3%;
     width: 75%;
     //height: calculated in js
-    max-height: 100%;
+    max-height: 70%;
     //border: 3px solid rgb(23, 160, 5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
 }
 
-[name = "text_1"] {
-    //konwersacje  
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    font-size: 6vw;
-    color: $orange;
+[name = "text_1"], 
+[name = "text_2"], 
+[name = "text_3"], 
+[name = "text_4"] {
     background-color: rgba(0, 0, 0, 0.6);    
     padding: 1vw 4vw;
     border-radius: 10px;
+    opacity: 0; //will animate in on component mount
+}
+
+[name = "text_1"] {
+    //konwersacje      
+    font-size: 10vmin;
+    color: $orange;
 }
 
 [name = "text_2"] {
-    //język angielski    
-    position: absolute;
-    top: 25%;
-    right: 10%;
-    font-size: 3vw;
-    color: $smoke;
-    background-color: rgba(0, 0, 0, 0.6);   
-    padding: 1vw 4vw;
-    border-radius: 10px;    
+    //język angielski   
+    font-size: 5vmin;
+    color: $yellow;    
 }
 
 [name = "text_3"] {
     //dwujęzyczny tłumacz konferencyjny
-    position: absolute;
-    top: 45%;
-    right: 10%;
     font-size: 4vw;
-    color: $yellow;
-    background-color: rgba(0, 0, 0, 0.6);   
-    padding: 1vw 4vw;
-    border-radius: 10px;    
+    color: $darkYellow;    
 }
 
 [name = "text_4"] {
     //20 lat doświadczenia
-    position: absolute;
-    top: 60%;
-    right: 10%;
     font-size: 4vw;
-    color: $green;
-    background-color: rgba(0, 0, 0, 0.6);   
-    padding: 1vw 4vw;
-    border-radius: 10px;    
+    color: $green;    
 }
 
 
 .menuItems {
-    // border: 1px solid rebeccapurple;
+    //border: 1px solid rebeccapurple;
     position: fixed;
     top: 10px;
     left: 40px;
@@ -97,7 +87,7 @@
     z-index: 1;
     // overflow: hidden;
     @media (max-width: 640px) {
-        transform: scale(0.9) translate(-40px, -10px);
+        transform: scaleX(0.9) translate(-40px, -10px);
     }
 }
 
@@ -170,7 +160,7 @@
     background-position: 50% 50%;
     transition: transform 1s;
     &:hover {
-        transform: scale(1.2);
+        transform: scale(1.5);
     }    
     &:after {
         content: '';
@@ -181,7 +171,7 @@
         left: 0;
         //border: 1px solid red;
         background-color:  rgba(0, 0, 0, 0.4);
-        border-top-right-radius: 40%;
+        border-top-right-radius: 50%;
     }
 
 }
