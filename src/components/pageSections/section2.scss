@@ -1,4 +1,5 @@
 @import '../../_variables';
+@import '../../_fonts';
 @import '../../_mixins';
 
 .gridder {
@@ -119,7 +120,7 @@
         position: absolute;
         bottom: 0%;
         left: 0;
-        font-family: $secondary-font;
+        font-family: secondaryFont;
         text-transform: uppercase;
         font-size: 14px;
         color: $yellow;
@@ -174,7 +175,7 @@
 }
 
 .methoderDescriptionContent {
-    font-family: $secondary-font;
+    font-family: secondaryFont;
     font-size: 12px;
     color: $darkSmoke;
     //border: 3px solid white;
@@ -195,7 +196,7 @@
     //border: 3px solid white;
     color: $darkYellow;
     text-transform: uppercase;
-    font-family: $secondary-font;
+    font-family: secondaryFont;
     text-align: center;
     margin: 1%;
     //font-size: 2vw;    

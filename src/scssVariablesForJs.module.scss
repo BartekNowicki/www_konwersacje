@@ -1,15 +1,25 @@
 
 @import '_variables';
 
+@font-face {
+    font-family: 'exportedPrimaryFont';
+    src: url('./fonts/StintUltraCondensed-Regular.ttf'); 
+}
+
+@font-face {
+  font-family: 'exportedSecondaryFont';
+  src: url('./fonts/RobotoCondensed-Regular.ttf');
+}
+
 $breakpoints: (
   small : 640px,
   medium: 800px,
   large : 1200px,  
 );
 
-:export {
-  scssPrimaryFont: $primary-font;
-  scssSecondaryFont: $secondary-font;
+:export {  
+  scssPrimaryFont: exportedPrimaryFont;
+  scssSecondaryFont: exportedSecondaryFont;
   scssSmoke: $smoke;
   scssOrange: $orange;
   scssOrangeLight: $orangeLight;  

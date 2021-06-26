@@ -6,7 +6,13 @@ module.exports = {
     keywords: `angielski, konwersacje, Warszawa, native`,
   },
   plugins: [
-       
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `fonts`,
+        path: `${__dirname}/src/fonts`,
+      }
+    },       
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-image`,

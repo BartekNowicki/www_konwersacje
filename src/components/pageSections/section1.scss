@@ -2,14 +2,15 @@
 // It does load the Google font. But there is a flash second when the default font is visible. Is there a way to prefetch the font so that the screen doesn't flicker? – Arunster Aug 13 '20 at 2:45
 // This is because of the display: swap. You can change the behavior but this is a way to avoid the render-block. The font is already downloaded but the CSS needs to be parsed either way and the display: swap loads don't block the CSS rendering and when the font is parsed, it swaps. Try display: block if you want to avoid the flicker. – Ferran Buireu Aug 13 '20 at 4:57
 
-@import url('https://fonts.googleapis.com/css2?family=Stint+Ultra+Condensed&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
 @import '../../_variables';
+@import '../../_fonts';
 @import '../../_mixins';
+
 
 .campsiteWrapper {
     // border: 5px solid rgb(241, 228, 33);    
-    font-family: $primary-font;
+    font-family: primaryFont;
     letter-spacing: 2px;    
     display: flex;
     flex-direction: column;  

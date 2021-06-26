@@ -1,11 +1,12 @@
 @import '../../_variables';
+@import '../../_fonts';
 
 
 .zapisyTop {
     color: $smoke;
     flex-grow: 0;
     & p {
-        font-family: $secondary-font;
+        font-family: secondaryFont;
         font-size: 12px;
         //border: 1px solid blue;
         padding: 1vh 0;
@@ -20,7 +21,7 @@
     justify-content: center;
     align-items: center;
     & form {
-        font-family: $secondary-font;
+        font-family: secondaryFont;
         border: 1px solid rgba(0, 0, 0, 0.5);
         border-radius: 10px;
         display: flex;
@@ -29,7 +30,7 @@
         height: 90%;
         flex-direction: column;        
         & [name = "email"] {
-            font-family: $secondary-font;
+            font-family: secondaryFont;
             //border: 1px solid blueviolet;
             border: 1px solid rgba(0, 0, 0, 0.5);
             border-radius: 10px;
@@ -37,7 +38,7 @@
             text-align: center;
         }
         & [name = "message"] {
-            font-family: $secondary-font;
+            font-family: secondaryFont;
             //border: 1px solid rgb(43, 226, 43);
             border: 1px solid rgba(0, 0, 0, 0.5);
             border-radius: 10px;
@@ -48,7 +49,7 @@
             text-align: center;
         }
         & button {
-            font-family: $secondary-font;
+            font-family: secondaryFont;
             //border: 1px solid red;
             border: 1px solid rgba(0, 0, 0, 0.5);
             border-radius: 10px;
