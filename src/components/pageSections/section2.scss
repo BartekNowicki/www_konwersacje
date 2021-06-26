@@ -81,7 +81,9 @@
     }
     &.Th {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../../images/lexis.svg');
+        // background-image: url('../../images/lexis.svg');
+        background-image: url('../../images/lexis_minified.svg');
+        
         @include methoderBckg;
     }
     &.No {
@@ -107,7 +109,9 @@
     }
     &.ma {
         border: 1px solid rgba(0, 0, 0, 0.2);
-        background-image: url('../../images/people.svg');
+        // background-image: url('../../images/people.svg');
+        background-image: url('../../images/people_minified.svg');
+        
         @include methoderBckg;
     }
     

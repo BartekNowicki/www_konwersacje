@@ -1,7 +1,9 @@
 import React, { useCallback } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { actionChangeIsMenuOpen, actionChangeLocation } from '../state/actions'
-import board from '../images/board.svg'
+//import board from '../images/board.svg'
+import board from '../images/board_minified.svg'
+
 import { gsap } from "gsap"
 import { ScrollToPlugin } from "gsap/ScrollToPlugin.js";
 gsap.registerPlugin(ScrollToPlugin);

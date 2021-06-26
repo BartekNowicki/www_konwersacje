@@ -1,7 +1,9 @@
 import React from 'react'
 import { Text } from './Text'
 import flagPL from '../images/flagPL.svg'
-import flagUS from '../images/flagUS.svg'
+// import flagUS from '../images/flagUS.svg'
+import flagUS from '../images/flagUS_minified.svg'
+
 import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 

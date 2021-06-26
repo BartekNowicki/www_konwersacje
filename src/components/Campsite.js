@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
+//import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import { Text } from '../components/Text'
 import Texter from "../components/Texter"
