@@ -1,12 +1,10 @@
 import React from 'react'
-import { Text } from './Text'
 import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 
 const Courser = ({ title, description, dates, price }) => {    
 
     const courserStyles = {
-        margin: '30px 0',
         border: '1px solid rgba(0, 0, 0, 0.1)',
         borderRadius: '10px',
         padding: '4vmin',

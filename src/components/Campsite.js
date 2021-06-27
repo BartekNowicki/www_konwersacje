@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 //import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
@@ -11,27 +11,6 @@ import * as scssVariables from '../scssVariablesForJs.module.scss'
 import { gsap } from 'gsap'
 
 
-const scaleAndgetCampsiteSvgHeight = (portrait) => {
-    
-    //protection clause for the Gatsby build process, where window does not exist
-    if (typeof window === 'undefined') return
-
-    const campsiteSvg = document.querySelector('.campsiteSvg');   
-
-    const originalSvgRatio = 2000 / 1000;
-
-    const weirdEmpiricalPart = 0.4; //0.2 is to small when deployed
-
-    const factor = portrait ? 1 : Number((1 + (originalSvgRatio - window.innerWidth / window.innerHeight)).toFixed(1)) + weirdEmpiricalPart;
-
-    //console.log('campsiteSvg scaled by ', factor);
-
-    campsiteSvg.style.transform = `scale(${factor})`;
-
-    return campsiteSvg ? campsiteSvg.getBoundingClientRect().height : 0;
-}
-
-
 
 export const Campsite = () => {
 
@@ -40,45 +19,57 @@ export const Campsite = () => {
     const portrait = useSelector((state) => state.isPortrait);
     const isMenuOpen = useSelector((state) => state.isMenuOpen);
     
-    const [renderCount, setRenderCount] = useState(0);
-
     const applyHeightPortrait = '100%';
     const applyHeightLandscape = '100%';
 
     let heroTextWrapperStyle = portrait
         ? { height: `${applyHeightPortrait}` }
         : { height: `${applyHeightLandscape}` }
+    
+    const scaleAndgetCampsiteSvgHeight = useCallback(
+        (portrait) => {
+        //protection clause for the Gatsby build process, where window does not exist
+            if (typeof window === 'undefined') return
 
-        //{ borderColor: 'red', height: `${applyHeightPortrait}` }
+            const campsiteSvg = document.querySelector('.campsiteSvg');   
+
+            const originalSvgRatio = 2000 / 1000;
+
+            const weirdEmpiricalPart = 0.4; //0.2 is to small when deployed
+
+            const factor = portrait ? 1 : Number((1 + (originalSvgRatio - window.innerWidth / window.innerHeight)).toFixed(1)) + weirdEmpiricalPart;
+
+            //console.log('campsiteSvg scaled by ', factor);
+
+            campsiteSvg.style.transform = `scale(${factor})`;
+
+            return campsiteSvg ? campsiteSvg.getBoundingClientRect().height : 0;
+        },        
+    [],); 
+    
 
 
-    const positionComponentContent = () => {
 
-        //console.log('POSITIONING COMPONENT CONTENT');
+    const positionComponentContent = useCallback(
+        (portrait) => {
+            //console.log('POSITIONING COMPONENT CONTENT');
 
-        //1) scale the campsiteSvg to cover a bit  more than necessary
-        //2 read its height after scaling and return the height to 
-        //position the hero text wrapper
+            //1) scale the campsiteSvg to cover a bit  more than necessary
+            //2 read its height after scaling and return the height to 
+            //position the hero text wrapper
 
-        let heightAfterScaling = scaleAndgetCampsiteSvgHeight(portrait);
+            let heightAfterScaling = scaleAndgetCampsiteSvgHeight(portrait);
 
-        heightAfterScaling = Math.floor(heightAfterScaling - window.innerWidth * 0.03);
+            heightAfterScaling = Math.floor(heightAfterScaling - window.innerWidth * 0.03);
 
-        //console.log(heightAfterScaling);
-
-        document.querySelector('.heroTextWrapper').style.height = heightAfterScaling + 'px';        
-
-        heroTextWrapperStyle = portrait
-        ? { height: `${applyHeightPortrait}` }
-        : { height: `${applyHeightLandscape}` }
-    }
+            document.querySelector('.heroTextWrapper').style.height = heightAfterScaling + 'px';        
+        },
+    [],);
     
 
     useEffect(() => {
 
-        positionComponentContent();
-
-        //console.log('initializing animations');
+        positionComponentContent(portrait);
 
         const tl = gsap.timeline();
         
@@ -105,17 +96,8 @@ export const Campsite = () => {
 
         }
 
-    }, [])
+    }, [portrait])
 
-    useEffect(() => {        
-        
-        setRenderCount(renderCount + 1);
-
-        //console.log('orientation change, rerendering for the nth time: ', renderCount);
-
-        positionComponentContent();    
-
-    }, [portrait]);
 
     const mainTextWrapper = { 
         backgroundColor: scssVariables.scssBlack,
@@ -224,5 +206,3 @@ export const Campsite = () => {
     </div>
     )
 }
-
-
