@@ -30,6 +30,8 @@ exports.handler = async (event) => {
 
 
     const accessToken = await oAuth2Client.getAccessToken();
+
+    
     
     
     const transport = nodemailer.createTransport({
