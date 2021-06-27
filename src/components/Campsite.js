@@ -73,24 +73,12 @@ export const Campsite = () => {
         : { height: `${applyHeightLandscape}` }
     }
     
-    
-    const initializeHeroAnimations = () => {
-
-        
-
-        // [name = "text_1"] 
-        // [name = "text_2"] 
-        // [name = "text_3"] 
-        // [name = "text_4"]
-    }
-    
-    
 
     useEffect(() => {
 
         positionComponentContent();
 
-        console.log('initializing animations');
+        //console.log('initializing animations');
 
         const tl = gsap.timeline();
         
@@ -135,34 +123,45 @@ export const Campsite = () => {
         fontFamily: '$secondary-font',
         fontSize: '12px',     
     }
+
+    const genericTexterStyles = {
+        //border: '1px solid red'   
+        borderRadius: '10px',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
+        padding: '2vw',
+        letterSpacing: '1px',
+        fontSize: '14px',
+        boxShadow: '10px 5px 5px black',
+        
+    }
         
     const texters = [
         {
             id: 0,
-            styles: { position: 'absolute', top: '11%', left: '20px' },
+            styles: { position: 'absolute', top: '11%', left: '20px', ...genericTexterStyles },
             textTop : data.textSection1_51a,
             textBottom: data.textSection1_51b,
         },
         {   id: 1,
-            styles: { position: 'absolute', top: '24%', left: '20px' },
+            styles: { position: 'absolute', top: '24%', left: '20px', ...genericTexterStyles },
             textTop: data.textSection1_52a,
             textBottom: data.textSection1_52b,
         },
         {
             id: 2,
-            styles: { position: 'absolute', top: '37%', left: '20px' },
+            styles: { position: 'absolute', top: '37%', left: '20px', ...genericTexterStyles },
             textTop: data.textSection1_53a,
             textBottom: data.textSection1_53b,
         },
         {
             id: 3,
-            styles: { position: 'absolute', top: '50%', left: '20px' },
+            styles: { position: 'absolute', top: '50%', left: '20px', ...genericTexterStyles },
             textTop: data.textSection1_54a,
             textBottom: data.textSection1_54b,
         },
         {
             id: 4,
-            styles: { position: 'absolute', top: '63%', left: '20px' },
+            styles: { position: 'absolute', top: '63%', left: '20px', ...genericTexterStyles },
             textTop: data.textSection1_55a,
             textBottom: data.textSection1_55b,
         },
