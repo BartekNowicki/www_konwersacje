@@ -27,8 +27,7 @@ const Section2 = ({ sectionID }) => {
             //enable back scrolling blocked by opened methoder
             //and scroll again to the right section
             document.body.style.position = 'unset';
-            document.getElementById('metodaID').scrollIntoView();
-            
+            document.getElementById('metodaID').scrollIntoView();            
         },
         [],
     );
