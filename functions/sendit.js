@@ -30,8 +30,6 @@ exports.handler = async (event) => {
 
 
     const accessToken = await oAuth2Client.getAccessToken();
-
-    
     
     
     const transport = nodemailer.createTransport({
@@ -42,13 +40,14 @@ exports.handler = async (event) => {
             clientId: process.env.GATSBY_CLIENT_ID,
             clientSecret: process.env.GATSBY_CLIENT_SECRET_KEY,
             refreshToken: process.env.GATSBY_REFRESH_TOKEN,
-            accessToken: accessToken,
-            
+            accessToken: accessToken,            
         }
     });
 
+    
+
     const mailOptions = {
-      from: 'bartosznowickihq@gmail.com',
+      from: 'angielskikonwersacjeeu@gmail.com',
       to: 'angielskikonwersacjeeu@gmail.com',
       subject: `you've got awesomness`,
       text: `what is awesome is this: ${JSON.stringify(mailContent)}`,
