@@ -1,5 +1,4 @@
  import React from 'react';
- //import { useInView } from 'react-intersection-observer';
  import { Text } from "./Text"
  import data from '../data'
  import { Formik, Form, Field, ErrorMessage } from 'formik';
@@ -10,12 +9,6 @@
 
 
 const BasicFormik = () => {
-
-    // const { ref, inView, entry } = useInView({
-    //   /* Optional options */
-    //   threshold: 0,
-    // });
-    
     
     const store = useStore();
     const isFormSent = useSelector((state) => state.isFormSent);  
@@ -40,15 +33,6 @@ const BasicFormik = () => {
     
     return (      
 
-      // <div ref={ ref } className = 'formikWrapper'>
-      <div className = 'formikWrapper'>
-
-      {/* {console.log(`FORMIK KOMPONENT RENDERED: ${inView}`)} */}
-
-      {/* FROM DOCS:  <h2>{`Header inside viewport ${inView}.`}</h2> */}
-
-      {/* {inView &&  */}
-      {true && 
         <Formik
 
           initialValues={{ email: '', message: '' }}
@@ -87,10 +71,7 @@ const BasicFormik = () => {
               <button type="submit" disabled={ isSubmitting }> mejla ślij! </button>
             </Form>
           )}
-        </Formik>
-      }
-
-    </div>
+        </Formik>     
    
  )};
 
