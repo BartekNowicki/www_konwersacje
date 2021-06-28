@@ -65,7 +65,10 @@ const BasicFormik = () => {
         >
 
           {({ isSubmitting }) => (
-            <Form>
+            <Form onBlur = { () => {
+                  console.log('blur');
+                  document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView()
+                  } }>
               
               <Field 
                 type="text" 
