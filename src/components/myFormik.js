@@ -30,7 +30,7 @@ const BasicFormik = () => {
     const confirmationStyles = {color: scssVariables.scssGreen, fontSize : '12px'};
 
     if (isFormSent) {
-      document.getElementById('zapisyID').scrollIntoView();
+      //document.getElementById('zapisyID').scrollIntoView();
       return (
       <>
         <Text tag = 'p' text = { data.textSection6_5 } styles = { confirmationStyles }/>        
