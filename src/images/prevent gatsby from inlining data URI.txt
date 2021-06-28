@@ -1,0 +1,1 @@
+"if the SVG is less than 10KB Gatsby is converting it to a data-uri..."

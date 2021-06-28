@@ -2,6 +2,8 @@ import React, { useCallback } from 'react'
 import { Text } from './Text'
 import { gsap } from 'gsap'
 
+//import noentry from '../images/noentry.inline.svg'
+
 let methoderTimeline = null;
 
 const movedMethoderStyles = {
@@ -82,12 +84,10 @@ const Methoder = ({ text, squareSize }) => {
         },
         [],
     );
-
-
-    
+   
     
     return (
-        <div className = {`methoder ${text[0]}${text[1]}`} style = {{ height: squareSize + 'px', width: squareSize}} onClick = { handleMethoderClick }>
+        <div className = {`methoder ${text[0]}${text[1]}`} style = {{ height: squareSize + 'px', width: squareSize }} onClick = { handleMethoderClick }>
 
             <Text tag = 'p' text = { text }/>
             <div className='decorator'></div>

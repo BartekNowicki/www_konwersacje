@@ -82,19 +82,17 @@
     }
     &.Th {
         border: 1px solid rgba(0,0,0,0.2);
-        // background-image: url('../../images/lexis.svg');
-        background-image: url('../../images/lexis_minified.svg');
-        
+        background-image: url('../../images/lexis_minified.svg');        
         @include methoderBckg;
     }
     &.No {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../../images/noentry.svg');
-        @include methoderBckg;
+        background-image: url('../../images/noentry_minified.svg');
+         @include methoderBckg;
     }
     &.Gr {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../../images/growth.svg');
+        background-image: url('../../images/growth.svg');        
         @include methoderBckg;
         
     }
@@ -105,7 +103,7 @@
     }
     &.IT {
         border: 1px solid rgba(0,0,0,0.2);
-        background-image: url('../../images/computer.svg');
+        background-image: url('../../images/computer_minified.svg');
         @include methoderBckg;
     }
     &.ma {
