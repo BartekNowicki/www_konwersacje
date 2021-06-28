@@ -30,6 +30,8 @@ const BasicFormik = () => {
       </>
     )
     }
+
+    const zapisy = document.getElementById('zapisyID');
     
     return (      
 
@@ -64,13 +66,30 @@ const BasicFormik = () => {
 
           {({ isSubmitting }) => (
             <Form>
-              <Field type="text" name="email" placeholder = 'komu odpisać?' onKeyUp = {(e) => store.dispatch(actionChangeEmail(e.target.value))}/>
+              
+              <Field 
+                type="text" 
+                name="email" 
+                placeholder = 'komu odpisać?' 
+                onKeyUp = { (e) => store.dispatch(actionChangeEmail(e.target.value)) } 
+                onBlur = { document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView() }/>
+
               <ErrorMessage style = { errorStyles } name="email" component="div" />
-              <Field type="textarea" name="message" placeholder = 'skrobnij coś' onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))} />
+
+              <Field 
+                type="textarea" 
+                name="message" 
+                placeholder = 'skrobnij coś' 
+                onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))}
+                onBlur = { document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView() }/>
+
               <ErrorMessage style = { errorStyles } name="message" component="div" />
+
               <button type="submit" disabled={ isSubmitting }> mejla ślij! </button>
+
             </Form>
           )}
+
         </Formik>     
    
  )};
