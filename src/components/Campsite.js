@@ -1,6 +1,5 @@
 import React, { useEffect, useCallback } from 'react'
 import { useSelector } from 'react-redux'
-//import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import { Text } from '../components/Text'
 import Texter from "../components/Texter"
@@ -100,7 +99,7 @@ export const Campsite = () => {
 
 
     const mainTextWrapper = { 
-        backgroundColor: scssVariables.scssBlack,
+        backgroundColor: scssVariables.section1BackgroundColor,
         letterSpacing: '1px',        
         fontFamily: '$secondary-font',
         fontSize: '12px',     

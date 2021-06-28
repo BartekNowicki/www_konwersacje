@@ -4,11 +4,12 @@ import data from '../../data'
 import MyFormik from '../myFormik'
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import './section6.scss';
+import Wave from '../Wave'
 
 const Section6 = ({ sectionID }) => {
 
     const styleOverride = {
-         backgroundColor: scssVariables.scssBlack,
+         backgroundColor: scssVariables.section6BackgroundColor,
          display: 'flex',
          flexDirection: 'column',
          justifyContent: 'start',         
@@ -41,7 +42,9 @@ const Section6 = ({ sectionID }) => {
                 
                 
 
-            </div>            
+            </div>
+
+            <Wave color = { scssVariables.section7BackgroundColor } />         
             
         </div>
     )

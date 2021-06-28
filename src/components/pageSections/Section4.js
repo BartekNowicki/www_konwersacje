@@ -4,6 +4,7 @@ import { Text } from '../Text'
 import data from '../../data'
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import Courser from '../../components/Courser'
+import Wave from '../Wave'
 
 
 
@@ -47,7 +48,7 @@ const Section4 = ({ sectionID }) => {
     const styleOverride = {
          
         //border: '2px solid pink',
-         backgroundColor: scssVariables.scssDark,
+         backgroundColor: scssVariables.section4BackgroundColor,
          fontFamily: scssVariables.scssSecondaryFont,
          fontSize: '3vmin',
 
@@ -73,6 +74,7 @@ const Section4 = ({ sectionID }) => {
     }
 
     return (
+
         <div id = { sectionID } className = 'pageSection'>
 
             <div className ='mainTextWrapper' style = { styleOverride }>
@@ -89,6 +91,8 @@ const Section4 = ({ sectionID }) => {
                 </div>                
 
             </div>
+
+            <Wave color = { scssVariables.section5BackgroundColor } />
             
         </div>
     )

@@ -5,13 +5,14 @@ import * as scssVariables from '../scssVariablesForJs.module.scss'
 const styles = {
         fontSize: '14px',
         position: 'absolute',
-        bottom: '0',
+        bottom: '0%',
         width: '100%',
         //border: '1px solid red',
         textAlign: 'center',
         color: scssVariables.scssYellow,
-        zIndex: '1'
+        zIndex: '3'
 }
+
 
 const Face = () => {
     return (

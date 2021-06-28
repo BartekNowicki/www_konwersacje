@@ -4,7 +4,7 @@ import * as React from "react"
 const Footer = () => (
   <footer style={{
       backgroundColor: 'black',    
-      border: '1px solid gray',
+      //border: '1px solid gray',
       padding: '2vw',
       display: 'flex',
       justifyContent: 'center'

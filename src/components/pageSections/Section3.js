@@ -3,6 +3,7 @@ import { Text } from '../Text'
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import Slider from '../Slider';
 import './section3.scss';
+import Wave from '../Wave'
 
     
 
@@ -10,7 +11,7 @@ const Section3 = ({ sectionID }) => {
 
     const styleOverride = {
          //border: '2px solid blue',
-         backgroundColor: scssVariables.scssBlack,
+         backgroundColor: scssVariables.section3BackgroundColor,
          display: 'flex',
          flexDirection: 'column',
          justifyContent: 'center',
@@ -24,6 +25,7 @@ const Section3 = ({ sectionID }) => {
     }
    
     return (
+
         <div id = { sectionID } className = 'pageSection'>
 
             <div className = 'mainTextWrapper' style = { styleOverride }>
@@ -33,6 +35,8 @@ const Section3 = ({ sectionID }) => {
                 </div>
 
             </div>
+        
+            <Wave color = { scssVariables.section4BackgroundColor } />
             
         </div>
     )

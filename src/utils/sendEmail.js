@@ -6,8 +6,6 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
 
   try {
       
-      //const { status } = await fetch('https://angielski-konwersacje.eu/.netlify/functions/sendit', {
-
       const { status } = await fetch('/.netlify/functions/sendit', {
 
       //const { status } = await fetch('http://localhost:8888/.netlify/functions/sendit', {

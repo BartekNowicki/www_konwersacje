@@ -6,6 +6,7 @@ import { Methoder, methoderTimeline } from '../Methoder'
 import  MethoderDescription from '../MethoderDescription'
 import './section2.scss';
 import * as scssVariables from '../../scssVariablesForJs.module.scss'
+import Wave from '../Wave'
 
 
 
@@ -83,7 +84,8 @@ const Section2 = ({ sectionID }) => {
     }, [portrait])
 
     
-    const styleOverride = { backgroundColor: scssVariables.scssDark }
+    const styleOverride = { backgroundColor: scssVariables.section2BackgroundColor }
+
     const descriptionStyles = {
         height: `calc(100% - ${methoderSize / 1.5}px)`,
         //border: '1px solid red', 
@@ -117,6 +119,9 @@ const Section2 = ({ sectionID }) => {
 
 
             </div>  
+
+            <Wave color = { scssVariables.section3BackgroundColor } />
+
         </div>
     )
 }
