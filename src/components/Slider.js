@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import Abouter from './Abouter';
 import arrow from '../images/arrow.svg'
 import { gsap } from 'gsap'
-// import primarySchoolLogo from '../images/primarySchoolLogo.svg'
 import primarySchoolLogo from '../images/primarySchoolLogo_minified.svg'
 import highschoolLogo from '../images/highschoolLogo.jpg'
 import westValleyCollegeLogo from '../images/westValleyCollegeLogo.jpg'
@@ -144,23 +143,25 @@ const arrowStyles = {
     width: '50px', 
     height: '50px',
     position: 'absolute',
-    bottom: '0',
+    bottom: '20%',
     backgroundImage: `url('${arrow}')`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: '60%',
     cursor: 'pointer',
+    zIndex: '3', //wave wrapper has 2
+    
 }
 
 
 const leftArrow = {    
-    left: '0',
+    left: '20%',
     transform: 'scale(-1)',
 }
 
 
 const rightArrow = {    
-    right: '0',
+    right: '20%',
 }
 
 

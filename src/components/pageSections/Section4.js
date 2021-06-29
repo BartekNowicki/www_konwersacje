@@ -25,19 +25,33 @@ const coursers = [
     },
     {
         id: 2,
+        title: 'Analyzing Scripts From Movies, TV Shows and Series',
+        description: 'grupa konwersacyjna spotykająca się raz w tygodniu',
+        dates: ['termin do ustalenia z uczestnikami'],
+        price: '1390zł / 20 spotkań'
+    },
+    {
+        id: 3,
+        title: 'English in IT for Programmers and Software Developers',
+        description: 'grupa konwersacyjna spotykająca się raz w tygodniu',
+        dates: ['termin do ustalenia z uczestnikami'],
+        price: '1390zł / 20 spotkań'
+    },
+    {
+        id: 4,
         title: 'General English in Conversation One-on-One',
         description: 'spotkania indywidualne',
         dates: ['terminy ustalane są na bieżąco'],
         price: '110zł / 60min'
     },
-    // {
-    //     id: 3,
-    //     title: 'course4',
-    //     description: 'description4',
-    //     dates: ['dates4'],
-    //     price: 'price4'
-    // },
-       
+    {
+        id: 5,
+        title: 'Specialized English in Conversation One-on-One',
+        description: 'spotkania indywidualne',
+        dates: ['terminy ustalane są na bieżąco'],
+        price: '140zł / 60min'
+    }
+           
 ];
 
 
@@ -50,7 +64,7 @@ const Section4 = ({ sectionID }) => {
         //border: '2px solid pink',
          backgroundColor: scssVariables.section4BackgroundColor,
          fontFamily: scssVariables.scssSecondaryFont,
-         fontSize: '3vmin',
+         fontSize: scssVariables.standardFontSize,
 
     }
     
@@ -59,18 +73,24 @@ const Section4 = ({ sectionID }) => {
     ? 
     {
         //border: '2px solid blue',
-        margin: '20px',
+        margin: '20px auto',
         overflowY: 'scroll',
+        scrollbarWidth: 'thin',
+        scrollbarColor: '#1D1D1D gray',
         height: '80vh',
-        maxWidth: '800px',
+        width: '100%',
+        maxWidth: '1000px',
     }
     :
     {
         //border: '2px solid blue',
         margin: '20px auto',
         overflowY: 'scroll',
+        scrollbarWidth: 'thin',
+        scrollbarColor: '#1D1D1D gray',
         height: '60vh',
-        maxWidth: '800px',       
+        width: '100%',
+        maxWidth: '1000px',       
     }
 
     return (

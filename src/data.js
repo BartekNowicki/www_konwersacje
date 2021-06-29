@@ -80,11 +80,24 @@ const data = {
     textSection5_3: 'W wyjątkowych sytuacjach istnieje możliwość wdzwonienia się na zajęcia poprzez mój laptop i komunikator.',
 
     textSection6_1: 'zapisy i kontakt',
-    textSection6_2: 'Jeżeli chcesz się zapisać lub porozmawiać o zajęciach, napisz do mnie po angielsku poprzez poniższy formularz lub bezpośrednio na',
-    textSection6_3: 'angielskikonwersacjeeu@gmail.com',
-    textSection6_4: 'postaram się odpowiedzieć do końca dnia',
+    textSection6_2: 'Jeżeli chcesz porozmawiać o zajęciach lub się zapisać, napisz do mnie poprzez poniższy formularz lub wyślij:',
+    textSection6_3a: 'email na:   angielskikonwersacjeeu@gmail.com',
+    textSection6_3b: 'sms na:   605 769 837',
+    textSection6_4: 'postaram się odpowiedzieć do końca dnia :)',
     textSection6_5: 'Dziękuję za wysłanie formularza. Jeżeli nie otrzymasz odpowiedzi, będzie to oznaczało, że połknęły go chochliki internetowe - napisz wtedy proszę zwykłego maila...',
-    text86b: 'gwarancja małej grupy max 5 osób lub zajęcia indywidualne',
+    textSection7_1: 'częste pytania',
+    textSection7_2a: 'Czy jesteś native speakerem?',
+    textSection7_2b: 'Według ścisłej definicji nie jestem, but I have been surrounded by native speakers since child and from the view point of a Polish citizen I can guarantee that the precise answer to this question, however complex it may be, lies beyond your needs if you have not spent most of your life in the US working as a linguist :)',
+    textSection7_3a: 'Czy mój angielski jest wystarczająco dobry aby móc się zapisać?',
+    textSection7_3b: 'Moja wieloletnia praca nauczycielska pokazuje, że 90% osób szukających konwersacji się na nie kwalifikuje, ponieważ osiągnęły już one poziom komunikatywny. Wolą rozwijać się raczej przez rozmowę oraz kontakt z innymi ludźmi niż przez klasyczne zadania z podręcznika. Ale oczywiście otrzymasz ode mnie test poziomujący lub możemy po prostu porozmawiać aby się upewnić.',
+    textSection7_4a: 'Czy możemy porozmawiać o kursie zanim się zapiszę?',
+    textSection7_4b: 'Tak będzie najlepiej i zachęcam każdego do tego. Spotkajmy się na próbną darmową lekcję podczas której wszystko omówimy a Ty zorientujesz się, jak pracuję z uczniami.',
+    textSection7_5a: 'Jaka jest dokładna lokalizacja zajęć?',
+    textSection7_5b: 'Będziemy spotykać się w rejonie Gocławia / Pragi południe w salce wynajmowanej specjalnie na potrzeby zajęć.',
+    textSection7_6a: 'Ile trwa kurs?',
+    textSection7_6b: 'Tyle semetrów, ile będą trwały grupy, nie nakładam tutaj z góry ograniczeń czasowych. Każdy semetr to 20 godzin po 60min w grupie Regular i 40 godzin po 60 minut w grupie Intense.',
+    textSection7_7a: 'Opowiesz coś więcej o sobie? Chciałbym lepiej poznać swojego nauczyciela.',
+    textSection7_7b: 'Z wykształcenia jestem psychologiem, z zamiłowania programistą oraz lingwistą, z aspiracji poliglotą, a zawodowo nauczycielem oraz tłumaczem konferencyjnym w kombinacji językowej polski-angielski.',
     text9: 'o mnie',
     text91: 'Z wykształcenia jestem psychologiem, z zamiłowania programistą oraz lingwistą, z aspiracji  poliglotą, a zawodowo nauczycielem oraz tłumaczem konferencyjnym w kombinacji językowej polski-angielski',
     text92: 'jezykiem angielskim posługuję się  na poziomie native speaker',
@@ -94,6 +107,7 @@ const data = {
     text96: 'Po studiach założyłem własną szkołę języka angielskiego pod nazwą \'Center For Conversational Language Development\', w której uczyłem w trybie konwersacyjnym przy zastosowaniu podejścia \'The Lexical Approach\'',
     text97: 'Od roku 2011 pracuję także jako tłumacz konferencyjny przekładając na żywo z języka polskiego na angielski i odwrotnie.',
     text98: 'Serdecznie zapraszam na zajęcia - come on down for a discussion - or just stay a while, and listen...',
+
     
 };
 

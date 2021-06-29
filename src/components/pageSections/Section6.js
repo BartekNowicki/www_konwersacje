@@ -6,6 +6,7 @@ import * as scssVariables from '../../scssVariablesForJs.module.scss'
 import './section6.scss';
 import Wave from '../Wave'
 
+
 const Section6 = ({ sectionID }) => {
 
     const styleOverride = {
@@ -13,7 +14,7 @@ const Section6 = ({ sectionID }) => {
          display: 'flex',
          flexDirection: 'column',
          justifyContent: 'start',         
-    }
+    }   
     
 
     return (
@@ -28,9 +29,11 @@ const Section6 = ({ sectionID }) => {
 
                     <Text tag = 'p' text = { data.textSection6_2 } styles = {{ textAlign: 'center' }}/>
 
-                    <Text tag = 'p' text = { data.textSection6_3 } styles = {{ color: scssVariables.scssGreen, textAlign: 'center', userSelect: 'text'}}/>
+                    <Text tag = 'p' text = { data.textSection6_3a } styles = {{ color: scssVariables.scssGreen, textAlign: 'center', userSelect: 'text'}}/>
 
-                    <Text tag = 'p' text = { data.textSection6_4 } styles = {{ fontSize: '12px' }} styles = {{ textAlign: 'center', fontSize: '12px' }}/>
+                    <Text tag = 'p' text = { data.textSection6_3b } styles = {{ color: scssVariables.scssGreen, textAlign: 'center' }}/>
+
+                    <Text tag = 'p' text = { data.textSection6_4 } styles = {{ textAlign: 'center' }}/>
                     
                 </div>
 

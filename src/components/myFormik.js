@@ -14,13 +14,24 @@ const BasicFormik = () => {
     const isFormSent = useSelector((state) => state.isFormSent);  
 
     const confirmFormSent = (isConfirmed) => {
-        console.log('form has been sent ', isConfirmed);
+        //console.log('form has been sent ', isConfirmed);
         store.dispatch(actionChangeFormSent(true));
         // const dispatch = useDispatch(); both work, just saying...
     }
 
-    const errorStyles = {color: scssVariables.scssOrange, fontSize : '12px', textAlign: 'center', padding: '1vh'};
-    const confirmationStyles = {color: scssVariables.scssGreen, fontSize : '12px'};
+    const errorStyles = {color: scssVariables.scssOrange, fontSize: scssVariables.standardFontSize, textAlign: 'center', padding: '1vh'};
+
+    const confirmationStyles = { color: scssVariables.scssGreen, fontSize: scssVariables.standardFontSize };
+
+    const fieldStyles = { fontSize: scssVariables.standardFontSize };
+
+    const sendStyles = { 
+      color: scssVariables.scssOrange, 
+      fontSize: scssVariables.standardFontSize, 
+      backgroundColor: scssVariables.scssGreen,
+      fontWeight: 'bold', 
+    };
+    
 
     if (isFormSent) {
       document.getElementById('zapisyID').scrollIntoView();
@@ -31,7 +42,7 @@ const BasicFormik = () => {
     )
     }
 
-    const zapisy = document.getElementById('zapisyID');
+    //const zapisy = document.getElementById('zapisyID');
     
     return (      
 
@@ -65,36 +76,27 @@ const BasicFormik = () => {
         >
 
           {({ isSubmitting }) => (
-            <Form onBlur = { () => {
-                  console.log('blur');
-                  document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView()
-                  } }>
+            <Form>
               
-              <Field 
+              <Field style = { fieldStyles }
                 type="text" 
                 name="email" 
                 placeholder = 'komu odpisać?' 
                 onKeyUp = { (e) => store.dispatch(actionChangeEmail(e.target.value)) } 
-                onBlur = { () => {
-                  console.log('blur');
-                  document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView()
-                } }/>
+              />
 
               <ErrorMessage style = { errorStyles } name="email" component="div" />
 
-              <Field 
+              <Field style = { fieldStyles }
                 type="textarea" 
                 name="message" 
-                placeholder = 'skrobnij coś' 
+                placeholder = 'Dear Bartek, please read the following: ' 
                 onKeyUp = {(e) => store.dispatch(actionChangeMessage(e.target.value))}
-                onBlur = { () => {
-                  console.log('blur');
-                  document.getElementById('zapisyID') && document.getElementById('zapisyID').scrollIntoView()
-                } }/>
+              />
 
               <ErrorMessage style = { errorStyles } name="message" component="div" />
 
-              <button type="submit" disabled={ isSubmitting }> mejla ślij! </button>
+              <button style = { sendStyles } type="submit" disabled={ isSubmitting }> wysyłam! </button>
 
             </Form>
           )}

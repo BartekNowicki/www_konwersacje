@@ -27,7 +27,7 @@
     width: 0vw;
     height: 0vh;
     overflow-y: scroll;
-    z-index: 1; //to match 'hey', which otherwise gets on top of it
+    z-index: 4; //to match 'hey', which otherwise gets on top of it
     background-color: rgba(0, 0, 0, 0.95);
     & button {
         width: 5vw;
@@ -119,16 +119,12 @@
         bottom: 0%;
         left: 0;
         font-family: secondaryFont;
-        text-transform: uppercase;
-        font-size: 14px;
+        text-transform: uppercase;        
         color: $yellow;
         padding: 5% 10%;
-        font-size: 1.5vw;
+        font-size: $standardFontSize;
         background-color: rgba(0, 0, 0, 0.6);
-        border-radius: 20px;      
-        @media (max-width: map-get($breakpoints, small)) {
-            font-size: 14px;            
-        }
+        border-radius: 20px;
     }
       
 }
@@ -174,7 +170,7 @@
 
 .methoderDescriptionContent {
     font-family: secondaryFont;
-    font-size: 12px;
+    font-size: $standardFontSize;
     color: $darkSmoke;
     //border: 3px solid white;
     & p {
@@ -183,11 +179,6 @@
     & p:last-of-type {
         padding-bottom: 20px;
     }
-        
-    @media (min-width: map-get($breakpoints, medium)) {
-        font-size: 14px;            
-    }  
-
 }
 
 .methoderDescriptionHeader {
@@ -197,5 +188,10 @@
     font-family: secondaryFont;
     text-align: center;
     margin: 1%;
-    //font-size: 2vw;    
+    font-size: $standardFontSize + 1vmin;
 }
+
+
+// @media (max-width: map-get($breakpoints, small)) {
+//     font-size: 14px;            
+// }

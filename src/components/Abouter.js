@@ -13,7 +13,7 @@ const Abouter = ({ text, logoUrl, country, location, dates, status }) => {
     const screenStyles = {
         color: scssVariables.scssSmoke,
         fontFamily: scssVariables.scssSecondaryFont,
-        fontSize: '4vmin',
+        fontSize: scssVariables.standardFontSize,
         display: 'flex',
         width: '100%', 
         height: '100%',

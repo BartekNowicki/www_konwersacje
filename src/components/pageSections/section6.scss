@@ -3,11 +3,12 @@
 
 
 .zapisyTop {
+    
     color: $smoke;
     flex-grow: 0;
     & p {
         font-family: secondaryFont;
-        font-size: 12px;
+        font-size: $standardFontSize;
         //border: 1px solid blue;
         padding: 1vh 0;
     }
@@ -26,7 +27,7 @@
         border-radius: 10px;
         display: flex;
         width: 90%;
-        max-width: 800px;
+        max-width: 1000px;
         height: 90%;
         flex-direction: column;        
         & [name = "email"] {

@@ -20,7 +20,7 @@ const Section5 = ({ sectionID }) => {
           //border: '2px solid pink',
           padding: '10px',
           fontFamily: scssVariables.scssSecondaryFont,
-          fontSize: '3vmin',          
+          fontSize: scssVariables.standardFontSize,         
           color: scssVariables.scssSmoke,        
     }
 
@@ -29,9 +29,7 @@ const Section5 = ({ sectionID }) => {
          display: 'flex',
          flexDirection: 'column',
          flexGrow: '1',
-         width: '100%',
-        //  justifyContent: 'center',
-        //  alignItems: 'center',
+         width: '100%',        
     }
 
    return (

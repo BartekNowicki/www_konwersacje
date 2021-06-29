@@ -2,8 +2,8 @@ import React, { useEffect, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
 import { Text } from '../components/Text'
-import Texter from "../components/Texter"
-import Face from "../components/Face"
+import Texter from '../components/Texter'
+import Face from '../components/Face'
 import  MenuItems from "./MenuItems"
 import data from '../data'
 import * as scssVariables from '../scssVariablesForJs.module.scss'
@@ -101,8 +101,7 @@ export const Campsite = () => {
     const mainTextWrapper = { 
         backgroundColor: scssVariables.section1BackgroundColor,
         letterSpacing: '1px',        
-        fontFamily: '$secondary-font',
-        fontSize: '12px',     
+        fontFamily: '$secondary-font',        
     }
 
     const genericTexterStyles = {
@@ -111,7 +110,7 @@ export const Campsite = () => {
         backgroundColor: 'rgba(0, 0, 0, 0.6)',
         padding: '2vw',
         letterSpacing: '1px',
-        fontSize: '14px',
+        fontSize: scssVariables.standardFontSize,
         boxShadow: '10px 5px 5px black',
         
     }

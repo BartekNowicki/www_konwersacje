@@ -3,7 +3,7 @@ import { Text } from "./Text"
 import * as scssVariables from '../scssVariablesForJs.module.scss'
 
 const styles = {
-        fontSize: '14px',
+        fontSize: scssVariables.standardFontSize,
         position: 'absolute',
         bottom: '0%',
         width: '100%',

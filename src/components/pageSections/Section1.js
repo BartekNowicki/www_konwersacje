@@ -17,3 +17,7 @@ const Section1 = ({ sectionID }) => {
 export default Section1
 
         
+
+
+//fontSize: scssVariables.standardFontSize,
+//font-size: $standardFontSize;
