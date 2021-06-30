@@ -1,7 +1,6 @@
 import React, { useEffect, useCallback } from 'react'
 import { useSelector } from 'react-redux'
 import CampsiteInlineSvg from '../images/campsite.inline.svg'
-import CampsiteInlineSvg_small from '../images/campsite_small.inline.svg'
 import { Text } from '../components/Text'
 import Texter from '../components/Texter'
 import Face from '../components/Face'
@@ -182,9 +181,7 @@ export const Campsite = () => {
 
     <div className = "campsiteWrapper">
 
-        {/* <CampsiteInlineSvg /> */}
-
-        <CampsiteInlineSvg_small />
+        <CampsiteInlineSvg />
         
         <MenuItems open = { isMenuOpen }/>
 
