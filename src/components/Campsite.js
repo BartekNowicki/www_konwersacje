@@ -1,6 +1,7 @@
 import React, { useEffect, useCallback } from 'react'
 import { useSelector } from 'react-redux'
-// import CampsiteInlineSvg from '../images/campsite.inline.svg'
+import CampsiteInlineSvg from '../images/campsite.inline.svg'
+import CampsiteInlineSvg_small from '../images/campsite_small.inline.svg'
 import { Text } from '../components/Text'
 import Texter from '../components/Texter'
 import Face from '../components/Face'
@@ -8,10 +9,6 @@ import  MenuItems from "./MenuItems"
 import data from '../data'
 import * as scssVariables from '../scssVariablesForJs.module.scss'
 import { gsap } from 'gsap'
-
-import AsyncCampsiteComponent from '../components/AsyncCampsiteComponent'
-
-
 
 
 
@@ -187,9 +184,8 @@ export const Campsite = () => {
 
         {/* <CampsiteInlineSvg /> */}
 
-        <AsyncCampsiteComponent />
+        <CampsiteInlineSvg_small />
         
-
         <MenuItems open = { isMenuOpen }/>
 
         <div className = "heroTextWrapper" style = { heroTextWrapperStyle }>
