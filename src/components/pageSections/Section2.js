@@ -14,6 +14,8 @@ const Section2 = ({ sectionID }) => {
     
     //console.log('SECTION2 RENDERED');
 
+    const [refForMeasurements, setRefForMeasurements] = useState(null);
+    
     const [methoderSize, setMethoderSize] = useState(0);
 
     const [newRender, setNewRender] = useState(0);
@@ -71,17 +73,34 @@ const Section2 = ({ sectionID }) => {
 
     const gridderFieldRef = useRef();
 
-    const portrait = useSelector((state) => state.isPortrait);    
+    const portrait = useSelector((state) => state.isPortrait);
+    
 
     useEffect(() => {
 
-        //console.log(gridderFieldRef.current);
+        if (!refForMeasurements) 
+        { 
+            setRefForMeasurements(gridderFieldRef.current);
+        }
+    }, [portrait]);
+    
 
-        const { width, height } = gridderFieldRef.current.getBoundingClientRect();
-        const size = Math.floor(Math.min(width, height));
-        //console.log('resize ', size);
-        setMethoderSize(size);
-    }, [portrait])
+
+    useEffect(() => {
+
+        if (refForMeasurements === null) return 
+
+        //console.log('new ref: ', refForMeasurements);
+
+        setTimeout(() => {
+            //console.log('new ref width: ', refForMeasurements.offsetWidth);
+            const { width, height } = refForMeasurements.getBoundingClientRect();
+            const size = Math.floor(Math.min(width, height));
+            //console.log('new size ', size);            
+            setMethoderSize(size);             
+        }, 1000);
+        
+    }, [refForMeasurements]);
 
     
     const styleOverride = { backgroundColor: scssVariables.section2BackgroundColor }

@@ -17,7 +17,8 @@ $breakpoints: (
   large : 1200px,  
 );
 
-:export {  
+:export {
+  
   scssPrimaryFont: exportedPrimaryFont;
   scssSecondaryFont: exportedSecondaryFont;
   scssSmoke: $smoke;

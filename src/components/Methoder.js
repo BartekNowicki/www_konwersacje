@@ -2,7 +2,6 @@ import React, { useCallback } from 'react'
 import { Text } from './Text'
 import { gsap } from 'gsap'
 
-//import noentry from '../images/noentry.inline.svg'
 
 let methoderTimeline = null;
 
@@ -10,7 +9,7 @@ const movedMethoderStyles = {
     position: 'fixed',
     top: '0', 
     left: '0',    
-    zIndex: 2,
+    zIndex: '10',
     cursor: 'default',
     transform: 'scale(0.5)'
 }
@@ -18,15 +17,18 @@ const movedMethoderStyles = {
 
 const Methoder = ({ text, squareSize }) => {
         
-    //console.log('METHODER RENDERED');
+    //console.log('METHODER RENDER, SQUARE SIZE: ', squareSize);
 
     const handleMethoderClick = useCallback(
         (e) => {
+
+            //console.log('clicked: ', e.target);
 
             if (e.target.tagName === 'P') {
                 //if clicked on a child, propagate up
                 //console.log('manually propagating the event to my parent');
                 e.target = e.target.parentNode;
+                
             }
             
             if (!e.target || e.target.getAttribute('status') === 'moved') return
@@ -99,9 +101,7 @@ const Methoder = ({ text, squareSize }) => {
     )
 }
 
-const test = 999;
 
-//export default Methoder
 export { Methoder, methoderTimeline };
 
 
