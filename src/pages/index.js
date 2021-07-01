@@ -1,5 +1,5 @@
 import * as React from "react"
-// import Section1 from "../components/pageSections/Section1"
+import Section1 from "../components/pageSections/Section1"
 // import Section2 from "../components/pageSections/Section2"
 // import Section3 from "../components/pageSections/Section3"
 // import Section4 from "../components/pageSections/Section4"
@@ -16,11 +16,6 @@ import { Provider } from 'react-redux'
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
-
-
-const ClientSideOnlyLazy_Section1 = React.lazy(() =>
-  import("../components/pageSections/Section1")
-);
 
 const ClientSideOnlyLazy_Section2 = React.lazy(() =>
   import("../components/pageSections/Section2")
@@ -68,7 +63,7 @@ const IndexPage = () => {
 
                     <Seo title="Home" />
 
-                    <ClientSideOnlyLazy_Section1 sectionID = {data.menu1+'ID'}/>
+                    <Section1 sectionID = {data.menu1+'ID'}/>
 
                     <ClientSideOnlyLazy_Section2 sectionID = {data.menu2+'ID'}/>
                     
