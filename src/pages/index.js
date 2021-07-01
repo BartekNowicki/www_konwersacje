@@ -1,21 +1,27 @@
 import * as React from "react"
-import Section1 from "../components/pageSections/Section1"
+// import Section1 from "../components/pageSections/Section1"
 // import Section2 from "../components/pageSections/Section2"
 // import Section3 from "../components/pageSections/Section3"
 // import Section4 from "../components/pageSections/Section4"
 // import Section5 from "../components/pageSections/Section5"
 // import Section6 from "../components/pageSections/Section6"
 // import Section7 from "../components/pageSections/Section7"
-import Seo from "../components/seo"
-import Layout from "../components/layout"
+import Seo from '../components/seo'
+import Layout from '../components/layout'
 import myStore  from '../state/createStore'
-import Footer from "../components/Footer"
-import data from "../data"
+import Footer from '../components/Footer'
+import data from '../data'
 import checkOrientationAndsetupResizeListener from "../utils/checkOrientationAndsetupResizeListener"
 import { Provider } from 'react-redux'
+import Loader from '../components/Loader'
 // import { Link } from "gatsby"
 // import { StaticImage } from "gatsby-plugin-image"
 
+
+
+const ClientSideOnlyLazy_Section1 = React.lazy(() =>
+  import("../components/pageSections/Section1")
+);
 
 const ClientSideOnlyLazy_Section2 = React.lazy(() =>
   import("../components/pageSections/Section2")
@@ -55,7 +61,7 @@ const IndexPage = () => {
 
       {!isSSR && (
 
-        <React.Suspense fallback={<div>LOADING...</div>}>
+        <React.Suspense fallback={ <Loader /> }>
             
             <Provider store = { store }>
   
@@ -63,7 +69,7 @@ const IndexPage = () => {
 
                     <Seo title="Home" />
 
-                    <Section1 sectionID = {data.menu1+'ID'}/>
+                    <ClientSideOnlyLazy_Section1 sectionID = {data.menu1+'ID'}/>
 
                     <ClientSideOnlyLazy_Section2 sectionID = {data.menu2+'ID'}/>
                     
@@ -92,6 +98,7 @@ const IndexPage = () => {
   )
 
 }
+
 
 
 export default IndexPage
