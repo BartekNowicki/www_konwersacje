@@ -13,6 +13,9 @@ const Content4 = () => {
             <Text tag = 'p' text = { data.textSection2_4d } />
             <Text tag = 'p' text = { data.textSection2_4e } />
             <Text tag = 'p' text = { data.textSection2_4f } />
+            <Text tag = 'p' text = { data.textSection2_4g } />
+            <Text tag = 'p' text = { data.textSection2_4h } />
+            
         </div>
     )
 }

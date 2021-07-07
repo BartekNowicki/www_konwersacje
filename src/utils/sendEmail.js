@@ -20,6 +20,7 @@ const sendEmail = async (submissionJSON, confirmFormSent) => {
       headers: {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Credentials': true,
+        'Content-Type': 'application/json',
       },
 
       redirect: 'follow', // manual, *follow, error
